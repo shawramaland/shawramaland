@@ -21,11 +21,15 @@ Now transitioning into sysadmin, IT infrastructure, and cloud operations while p
 
 **Tools & Infrastructure**
 
-[![Tools](https://skillicons.dev/icons?i=gcp,docker,kubernetes,linux,git&theme=dark&perline=5)](https://skillicons.dev)
+[![Tools](https://skillicons.dev/icons?i=gcp,docker,kubernetes,git&theme=dark&perline=5)](https://skillicons.dev)
 
 **Languages**
 
 [![Languages](https://skillicons.dev/icons?i=python,java&theme=dark&perline=5)](https://skillicons.dev)
+
+**Operating Systems & Editors**
+
+[![OS](https://skillicons.dev/icons?i=linux,windows,vscode&theme=dark&perline=5)](https://skillicons.dev)
 
 ---
 
