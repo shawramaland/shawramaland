@@ -51,7 +51,6 @@ def generate_svg(weeks, total):
     width = LEFT_PAD + cols * STEP + RIGHT_PAD
     height = TOP_PAD + rows * STEP + BOTTOM_PAD
 
-    # weekday 0=Sun in GitHub API — show Mon at top
     day_labels = ['', 'Mon', '', 'Wed', '', 'Fri', '']
 
     lines = []
@@ -74,6 +73,10 @@ def generate_svg(weeks, total):
     <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
     <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
+  <filter id="redglow">
+    <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+    <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
 </defs>''')
 
     # Background
@@ -83,11 +86,101 @@ def generate_svg(weeks, total):
     lines.append(f'<text x="{width // 2}" y="17" text-anchor="middle" fill="#4fc3f7" font-family="monospace" font-size="11" font-weight="bold" letter-spacing="2">NAVAL COMMAND — CONTRIBUTION GRID</text>')
     lines.append(f'<text x="{width // 2}" y="32" text-anchor="middle" fill="#37474f" font-family="monospace" font-size="9">{total} OPERATIONS LOGGED</text>')
 
+    # Torpedo 1 — left to right, row 2
+    t1y = TOP_PAD + 2 * STEP + CELL // 2
+    lines.append(f'<g>')
+    lines.append(f'  <ellipse cx="0" cy="{t1y}" rx="9" ry="3" fill="#c0392b" opacity="0.9"/>')
+    lines.append(f'  <ellipse cx="-7" cy="{t1y}" rx="6" ry="2" fill="#e74c3c" opacity="0.55"/>')
+    lines.append(f'  <ellipse cx="-14" cy="{t1y}" rx="4" ry="1.5" fill="#ff9999" opacity="0.3"/>')
+    lines.append(f'  <animateTransform attributeName="transform" type="translate" from="-30 0" to="{width + 30} 0" dur="9s" repeatCount="indefinite"/>')
+    lines.append(f'</g>')
+
+    # Torpedo 2 — right to left, row 5
+    t2y = TOP_PAD + 5 * STEP + CELL // 2
+    lines.append(f'<g>')
+    lines.append(f'  <ellipse cx="{width}" cy="{t2y}" rx="9" ry="3" fill="#e67e22" opacity="0.9"/>')
+    lines.append(f'  <ellipse cx="{width + 7}" cy="{t2y}" rx="6" ry="2" fill="#f39c12" opacity="0.55"/>')
+    lines.append(f'  <ellipse cx="{width + 14}" cy="{t2y}" rx="4" ry="1.5" fill="#ffcc80" opacity="0.3"/>')
+    lines.append(f'  <animateTransform attributeName="transform" type="translate" from="30 0" to="{-(width + 30)} 0" dur="12s" repeatCount="indefinite" begin="4s"/>')
+    lines.append(f'</g>')
+
+    # Cells
+    for week_idx, week in enumerate(weeks):
+        for day in week["contributionDays"]:
+            count = day["contributionCount"]
+            weekday = day["weekday"]
+            row = weekday
+
+            x = LEFT_PAD + week_idx * STEP
+            y = TOP_PAD + row * STEP
+            cx = x + CELL // 2
+            cy = y + CELL // 2
+            rv = CELL // 2 - 1
+
+            delay = f"{(week_idx * 0.07 + row * 0.13) % 3:.2f}s"
+            dur = f"{1.5 + (week_idx * 0.03 + row * 0.07) % 1:.2f}s"
+
+            # Cell background
+            lines.append(f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" fill="#0a1628" rx="1"/>')
+
+            if count == 0:
+                # Miss — blue peg + water ripple
+                lines.append(f'<circle cx="{cx}" cy="{cy}" r="{rv}" fill="url(#miss)" opacity="0.6"/>')
+                lines.append(f'<circle cx="{cx - 2}" cy="{cy - 2}" r="1.5" fill="white" opacity="0.2"/>')
+                lines.append(f'<circle cx="{cx}" cy="{cy}" r="2" fill="none" stroke="#4fc3f7" stroke-width="0.5">')
+                lines.append(f'  <animate attributeName="r" values="2;{rv};2" dur="{dur}" repeatCount="indefinite" begin="{delay}"/>')
+                lines.append(f'  <animate attributeName="opacity" values="0.3;0;0.3" dur="{dur}" repeatCount="indefinite" begin="{delay}"/>')
+                lines.append(f'</circle>')
+
+            elif count < 4:
+                # Hit — orange peg + expanding ring + smoke
+                lines.append(f'<circle cx="{cx}" cy="{cy}" r="{rv}" fill="url(#low)" filter="url(#glow)"/>')
+                lines.append(f'<circle cx="{cx - 2}" cy="{cy - 2}" r="1.5" fill="white" opacity="0.35"/>')
+                lines.append(f'<circle cx="{cx}" cy="{cy}" r="{rv}" fill="none" stroke="#e67e22" stroke-width="2">')
+                lines.append(f'  <animate attributeName="r" from="{rv}" to="{rv + 5}" dur="{dur}" repeatCount="indefinite" begin="{delay}"/>')
+                lines.append(f'  <animate attributeName="opacity" from="0.7" to="0" dur="{dur}" repeatCount="indefinite" begin="{delay}"/>')
+                lines.append(f'  <animate attributeName="stroke-width" from="2" to="0.5" dur="{dur}" repeatCount="indefinite" begin="{delay}"/>')
+                lines.append(f'</circle>')
+                lines.append(f'<circle cx="{cx}" cy="{cy - rv}" r="2" fill="#777" opacity="0">')
+                lines.append(f'  <animate attributeName="cy" from="{cy - rv}" to="{cy - rv - 12}" dur="{dur}" repeatCount="indefinite" begin="{delay}"/>')
+                lines.append(f'  <animate attributeName="opacity" values="0;0.5;0" dur="{dur}" repeatCount="indefinite" begin="{delay}"/>')
+                lines.append(f'  <animate attributeName="r" from="2" to="4" dur="{dur}" repeatCount="indefinite" begin="{delay}"/>')
+                lines.append(f'</circle>')
+
+            else:
+                # Direct hit — pulsing red + double rings + smoke
+                lines.append(f'<circle cx="{cx}" cy="{cy}" r="{rv}" fill="url(#hit)" filter="url(#redglow)"/>')
+                lines.append(f'<circle cx="{cx - 2}" cy="{cy - 2}" r="1.5" fill="white" opacity="0.5"/>')
+                # Pulsing core
+                lines.append(f'<circle cx="{cx}" cy="{cy}" r="{rv}" fill="url(#hit)" opacity="0.4">')
+                lines.append(f'  <animate attributeName="r" values="{rv};{rv + 2};{rv}" dur="0.8s" repeatCount="indefinite" begin="{delay}"/>')
+                lines.append(f'  <animate attributeName="opacity" values="0.4;0.9;0.4" dur="0.8s" repeatCount="indefinite" begin="{delay}"/>')
+                lines.append(f'</circle>')
+                # Ring 1 — red
+                lines.append(f'<circle cx="{cx}" cy="{cy}" r="{rv}" fill="none" stroke="#ff4444" stroke-width="2.5">')
+                lines.append(f'  <animate attributeName="r" from="{rv}" to="{rv + 7}" dur="{dur}" repeatCount="indefinite" begin="{delay}"/>')
+                lines.append(f'  <animate attributeName="opacity" from="0.9" to="0" dur="{dur}" repeatCount="indefinite" begin="{delay}"/>')
+                lines.append(f'  <animate attributeName="stroke-width" from="2.5" to="0.5" dur="{dur}" repeatCount="indefinite" begin="{delay}"/>')
+                lines.append(f'</circle>')
+                # Ring 2 — orange, offset
+                delay2 = f"{(float(delay[:-1]) + float(dur[:-1]) * 0.4) % 3:.2f}s"
+                lines.append(f'<circle cx="{cx}" cy="{cy}" r="{rv}" fill="none" stroke="#ff8800" stroke-width="1.5">')
+                lines.append(f'  <animate attributeName="r" from="{rv}" to="{rv + 7}" dur="{dur}" repeatCount="indefinite" begin="{delay2}"/>')
+                lines.append(f'  <animate attributeName="opacity" from="0.7" to="0" dur="{dur}" repeatCount="indefinite" begin="{delay2}"/>')
+                lines.append(f'  <animate attributeName="stroke-width" from="1.5" to="0.3" dur="{dur}" repeatCount="indefinite" begin="{delay2}"/>')
+                lines.append(f'</circle>')
+                # Smoke
+                lines.append(f'<circle cx="{cx}" cy="{cy - rv}" r="2.5" fill="#999" opacity="0">')
+                lines.append(f'  <animate attributeName="cy" from="{cy - rv}" to="{cy - rv - 15}" dur="{dur}" repeatCount="indefinite" begin="{delay}"/>')
+                lines.append(f'  <animate attributeName="opacity" values="0;0.6;0" dur="{dur}" repeatCount="indefinite" begin="{delay}"/>')
+                lines.append(f'  <animate attributeName="r" from="2.5" to="5" dur="{dur}" repeatCount="indefinite" begin="{delay}"/>')
+                lines.append(f'</circle>')
+
     # Day labels
     for i, label in enumerate(day_labels):
         if label:
-            y = TOP_PAD + i * STEP + CELL // 2 + 3
-            lines.append(f'<text x="{LEFT_PAD - 5}" y="{y}" text-anchor="end" fill="#37474f" font-family="monospace" font-size="7">{label}</text>')
+            y_lbl = TOP_PAD + i * STEP + CELL // 2 + 3
+            lines.append(f'<text x="{LEFT_PAD - 5}" y="{y_lbl}" text-anchor="end" fill="#37474f" font-family="monospace" font-size="7">{label}</text>')
 
     # Month labels
     last_month = None
@@ -95,40 +188,9 @@ def generate_svg(weeks, total):
         if week["contributionDays"]:
             month = datetime.strptime(week["contributionDays"][0]["date"], "%Y-%m-%d").strftime("%b")
             if month != last_month:
-                x = LEFT_PAD + week_idx * STEP
-                lines.append(f'<text x="{x}" y="{TOP_PAD - 8}" fill="#37474f" font-family="monospace" font-size="7">{month}</text>')
+                mx = LEFT_PAD + week_idx * STEP
+                lines.append(f'<text x="{mx}" y="{TOP_PAD - 8}" fill="#37474f" font-family="monospace" font-size="7">{month}</text>')
                 last_month = month
-
-    # Cells
-    for week_idx, week in enumerate(weeks):
-        for day in week["contributionDays"]:
-            count = day["contributionCount"]
-            # GitHub weekday: 0=Sun, 1=Mon ... 6=Sat
-            weekday = day["weekday"]
-            row = weekday  # keep Sun at top to match GitHub layout
-
-            x = LEFT_PAD + week_idx * STEP
-            y = TOP_PAD + row * STEP
-            cx = x + CELL // 2
-            cy = y + CELL // 2
-            r = CELL // 2 - 1
-
-            # Cell background (water)
-            lines.append(f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" fill="#0a1628" rx="1"/>')
-
-            if count == 0:
-                # Miss — blue peg
-                lines.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="url(#miss)" opacity="0.7"/>')
-                lines.append(f'<circle cx="{cx - 2}" cy="{cy - 2}" r="1.5" fill="white" opacity="0.2"/>')
-            elif count < 4:
-                # Hit — orange
-                lines.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="url(#low)"/>')
-                lines.append(f'<circle cx="{cx - 2}" cy="{cy - 2}" r="1.5" fill="white" opacity="0.35"/>')
-            else:
-                # Direct hit — red with glow
-                lines.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="url(#hit)" filter="url(#glow)"/>')
-                lines.append(f'<circle cx="{cx - 2}" cy="{cy - 2}" r="1.5" fill="white" opacity="0.45"/>')
-                lines.append(f'<circle cx="{cx}" cy="{cy}" r="{r + 2}" fill="none" stroke="#ff4444" stroke-width="0.5" opacity="0.4"/>')
 
     # Legend
     legend_y = height - 10
@@ -137,7 +199,7 @@ def generate_svg(weeks, total):
     lines.append(f'<text x="{lx + 10}" y="{legend_y}" fill="#37474f" font-family="monospace" font-size="7">MISS</text>')
     lines.append(f'<circle cx="{lx + 42}" cy="{legend_y - 3}" r="3" fill="url(#low)"/>')
     lines.append(f'<text x="{lx + 48}" y="{legend_y}" fill="#37474f" font-family="monospace" font-size="7">HIT</text>')
-    lines.append(f'<circle cx="{lx + 74}" cy="{legend_y - 3}" r="3" fill="url(#hit)" filter="url(#glow)"/>')
+    lines.append(f'<circle cx="{lx + 74}" cy="{legend_y - 3}" r="3" fill="url(#hit)" filter="url(#redglow)"/>')
     lines.append(f'<text x="{lx + 80}" y="{legend_y}" fill="#37474f" font-family="monospace" font-size="7">DIRECT HIT</text>')
 
     lines.append('</svg>')
