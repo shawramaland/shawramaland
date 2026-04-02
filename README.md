@@ -19,7 +19,13 @@ Now transitioning into sysadmin, IT infrastructure, and cloud operations while p
 
 ## Tech Stack
 
-[![My Skills](https://skillicons.dev/icons?i=python,java,kubernetes,gcp,docker,linux,git&theme=dark&perline=7)](https://skillicons.dev)
+**Tools & Infrastructure**
+
+[![Tools](https://skillicons.dev/icons?i=gcp,docker,kubernetes,linux,git&theme=dark&perline=5)](https://skillicons.dev)
+
+**Languages**
+
+[![Languages](https://skillicons.dev/icons?i=python,java&theme=dark&perline=5)](https://skillicons.dev)
 
 ---
 
