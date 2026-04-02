@@ -86,24 +86,6 @@ def generate_svg(weeks, total):
     lines.append(f'<text x="{width // 2}" y="17" text-anchor="middle" fill="#4fc3f7" font-family="monospace" font-size="11" font-weight="bold" letter-spacing="2">NAVAL COMMAND — CONTRIBUTION GRID</text>')
     lines.append(f'<text x="{width // 2}" y="32" text-anchor="middle" fill="#37474f" font-family="monospace" font-size="9">{total} OPERATIONS LOGGED</text>')
 
-    # Torpedo 1 — left to right, row 2
-    t1y = TOP_PAD + 2 * STEP + CELL // 2
-    lines.append(f'<g>')
-    lines.append(f'  <ellipse cx="0" cy="{t1y}" rx="9" ry="3" fill="#c0392b" opacity="0.9"/>')
-    lines.append(f'  <ellipse cx="-7" cy="{t1y}" rx="6" ry="2" fill="#e74c3c" opacity="0.55"/>')
-    lines.append(f'  <ellipse cx="-14" cy="{t1y}" rx="4" ry="1.5" fill="#ff9999" opacity="0.3"/>')
-    lines.append(f'  <animateTransform attributeName="transform" type="translate" from="-30 0" to="{width + 30} 0" dur="9s" repeatCount="indefinite"/>')
-    lines.append(f'</g>')
-
-    # Torpedo 2 — right to left, row 5
-    t2y = TOP_PAD + 5 * STEP + CELL // 2
-    lines.append(f'<g>')
-    lines.append(f'  <ellipse cx="{width}" cy="{t2y}" rx="9" ry="3" fill="#e67e22" opacity="0.9"/>')
-    lines.append(f'  <ellipse cx="{width + 7}" cy="{t2y}" rx="6" ry="2" fill="#f39c12" opacity="0.55"/>')
-    lines.append(f'  <ellipse cx="{width + 14}" cy="{t2y}" rx="4" ry="1.5" fill="#ffcc80" opacity="0.3"/>')
-    lines.append(f'  <animateTransform attributeName="transform" type="translate" from="30 0" to="{-(width + 30)} 0" dur="12s" repeatCount="indefinite" begin="4s"/>')
-    lines.append(f'</g>')
-
     # Cells
     for week_idx, week in enumerate(weeks):
         for day in week["contributionDays"]:
@@ -175,6 +157,24 @@ def generate_svg(weeks, total):
                 lines.append(f'  <animate attributeName="opacity" values="0;0.6;0" dur="{dur}" repeatCount="indefinite" begin="{delay}"/>')
                 lines.append(f'  <animate attributeName="r" from="2.5" to="5" dur="{dur}" repeatCount="indefinite" begin="{delay}"/>')
                 lines.append(f'</circle>')
+
+    # Torpedo 1 — left to right, row 2 (drawn OVER cells)
+    t1y = TOP_PAD + 2 * STEP + CELL // 2
+    lines.append(f'<g>')
+    lines.append(f'  <ellipse cx="0" cy="{t1y}" rx="9" ry="3" fill="#c0392b" opacity="0.9"/>')
+    lines.append(f'  <ellipse cx="-7" cy="{t1y}" rx="6" ry="2" fill="#e74c3c" opacity="0.55"/>')
+    lines.append(f'  <ellipse cx="-14" cy="{t1y}" rx="4" ry="1.5" fill="#ff9999" opacity="0.3"/>')
+    lines.append(f'  <animateTransform attributeName="transform" type="translate" from="-30 0" to="{width + 30} 0" dur="9s" repeatCount="indefinite"/>')
+    lines.append(f'</g>')
+
+    # Torpedo 2 — right to left, row 5 (drawn OVER cells)
+    t2y = TOP_PAD + 5 * STEP + CELL // 2
+    lines.append(f'<g>')
+    lines.append(f'  <ellipse cx="{width}" cy="{t2y}" rx="9" ry="3" fill="#e67e22" opacity="0.9"/>')
+    lines.append(f'  <ellipse cx="{width + 7}" cy="{t2y}" rx="6" ry="2" fill="#f39c12" opacity="0.55"/>')
+    lines.append(f'  <ellipse cx="{width + 14}" cy="{t2y}" rx="4" ry="1.5" fill="#ffcc80" opacity="0.3"/>')
+    lines.append(f'  <animateTransform attributeName="transform" type="translate" from="30 0" to="{-(width + 30)} 0" dur="12s" repeatCount="indefinite" begin="4s"/>')
+    lines.append(f'</g>')
 
     # Day labels
     for i, label in enumerate(day_labels):
