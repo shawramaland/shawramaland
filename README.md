@@ -1,4 +1,4 @@
-# Hey, I'm Gershon (Garry) Zmora 👋
+# Hello There, I'm Gershon (Garry) Zmora 👋
 
 **Google-certified Cloud Engineer** based in Israel.  
 3 years working with GCP infrastructure — Compute Engine, VPC, IAM, Kubernetes — supporting enterprise customers at scale.  
