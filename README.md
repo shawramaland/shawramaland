@@ -1,6 +1,6 @@
-# Hello There, I'm Gershon (Garry) Zmora 👋
+# Hello There, My name is Garry👋
 
-**Google-certified Cloud Engineer** based in Israel.  
+**Google-certified Cloud Engineer**.  
 3 years working with GCP infrastructure — Compute Engine, VPC, IAM, Kubernetes — supporting enterprise customers at scale.  
 Now transitioning into sysadmin, IT infrastructure, and cloud operations while picking up cybersecurity on the side.
 
@@ -44,13 +44,6 @@ Now transitioning into sysadmin, IT infrastructure, and cloud operations while p
 ## Projects
 
 - 🎮 **[Job Tracker](https://github.com/shawramaland/jobtracking)** — built while job hunting. Tracks applications, preps for interviews, and has arcade games for the waiting. Dockerized.
-
----
-
-## Background
-
-Ex-Israel Air Force — Helicopter Mechanic and Rescue Team Leader.  
-Learned to stay calm when things break under pressure. Still applies.
 
 ---
 
