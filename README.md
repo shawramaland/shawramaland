@@ -1,8 +1,10 @@
-# Hello there, my name is Garry👋
+# Hello there, I'm Garry 👋
 
-**Google-certified Cloud Engineer**.  
-3 years working with GCP infrastructure — Compute Engine, VPC, IAM, Kubernetes — supporting enterprise customers at scale.  
-Now transitioning into sysadmin, IT infrastructure, and cloud operations while picking up cybersecurity on the side.
+**Google Certified Cloud Engineer**  
+
+I have 3 years of experience working with GCP infrastructure, including Compute Engine, VPC, IAM, and Kubernetes, supporting enterprise customers at scale.  
+
+Currently transitioning into system administration, IT infrastructure, and cloud operations, while also exploring cybersecurity.
 
 ---
 
