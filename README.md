@@ -1,4 +1,4 @@
-# Hello There, My name is Garry👋
+# Hello there, my name is Garry👋
 
 **Google-certified Cloud Engineer**.  
 3 years working with GCP infrastructure — Compute Engine, VPC, IAM, Kubernetes — supporting enterprise customers at scale.  
