@@ -79,7 +79,7 @@
 <line x1="0" y1="184" x2="838" y2="184" stroke="#ffffff" stroke-width="0.3" opacity="0.03"/>
 <line x1="0" y1="159" x2="838" y2="159" stroke="#1a3a1a" stroke-width="1" opacity="0.6"/>
 <text x="419" y="18" text-anchor="middle" fill="#ff2200" font-family="monospace" font-size="12" font-weight="bold" letter-spacing="4" filter="url(#red-glow)">⚔ FRONTLINE — OPERATION LOG ⚔</text>
-<text x="419" y="34" text-anchor="middle" fill="#3a5a3a" font-family="monospace" font-size="8" letter-spacing="2">35 OPERATIONS CONFIRMED</text>
+<text x="419" y="34" text-anchor="middle" fill="#3a5a3a" font-family="monospace" font-size="8" letter-spacing="2">37 OPERATIONS CONFIRMED</text>
 <rect x="758" y="6" width="65" height="14" fill="#1a0000" rx="2" stroke="#ff2200" stroke-width="0.5"/>
 <text x="791" y="16" text-anchor="middle" fill="#ff2200" font-family="monospace" font-size="7" font-weight="bold" letter-spacing="1">
   ● ALERT ACTIVE
@@ -2059,6 +2059,21 @@
   <animate attributeName="cy" from="127" to="109" dur="1.79s" repeatCount="indefinite" begin="0.27s"/>
   <animate attributeName="opacity" values="0;0.7;0" dur="1.79s" repeatCount="indefinite" begin="0.27s"/>
   <animate attributeName="r" from="2" to="6" dur="1.79s" repeatCount="indefinite" begin="0.27s"/>
+</circle>
+<rect x="808" y="142" width="13" height="13" fill="#0a120a" rx="2"/>
+<circle cx="814" cy="148" r="5" fill="url(#alert-med)" filter="url(#orange-glow)"/>
+<circle cx="814" cy="148" r="5" fill="none" stroke="#ffaa00" stroke-width="1.5">
+  <animate attributeName="r" from="5" to="9" dur="1.54s" repeatCount="indefinite" begin="3.78s"/>
+  <animate attributeName="opacity" from="0.8" to="0" dur="1.54s" repeatCount="indefinite" begin="3.78s"/>
+  <animate attributeName="stroke-width" from="1.5" to="0.3" dur="1.54s" repeatCount="indefinite" begin="3.78s"/>
+</circle>
+<circle cx="814" cy="148" r="3" fill="#ffcc00" opacity="0">
+  <animate attributeName="opacity" values="0;0.6;0" dur="1.54s" repeatCount="indefinite" begin="3.78s"/>
+</circle>
+<circle cx="814" cy="143" r="2" fill="#3a3a3a" opacity="0" filter="url(#smoke-blur)">
+  <animate attributeName="cy" from="143" to="133" dur="1.54s" repeatCount="indefinite" begin="3.78s"/>
+  <animate attributeName="opacity" values="0;0.4;0" dur="1.54s" repeatCount="indefinite" begin="3.78s"/>
+  <animate attributeName="r" from="2" to="4" dur="1.54s" repeatCount="indefinite" begin="3.78s"/>
 </circle>
 <text x="23" y="76" text-anchor="end" fill="#2a4a2a" font-family="monospace" font-size="7">Mon</text>
 <text x="23" y="106" text-anchor="end" fill="#2a4a2a" font-family="monospace" font-size="7">Wed</text>
