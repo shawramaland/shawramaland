@@ -1,8 +1,7 @@
 # Hello There, my name is Gershon (or Garry in short)👋
 
-**Google-certified Cloud Engineer** based in Israel.  
-3 years working with GCP infrastructure — Compute Engine, VPC, IAM, Kubernetes — supporting enterprise customers at scale.  
-Now transitioning into sysadmin, IT infrastructure, and cloud operations while picking up cybersecurity on the side.
+Google-certified Cloud Engineer based in Israel, with about 3 years of experience working with GCP (Compute Engine, VPC, IAM, Kubernetes) and supporting enterprise customers at scale.
+Currently transitioning into sysadmin, IT infrastructure, and cloud operations, while also exploring cybersecurity on the side.
 
 ---
 
