@@ -1919,14 +1919,48 @@
   <animate attributeName="opacity" values="0.3;0.1;0.3" dur="4s" repeatCount="indefinite" begin="3.06s"/>
 </circle>
 <rect x="793" y="67" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="799" cy="73" r="4" fill="url(#quiet)"/>
-<circle cx="799" cy="73" r="3" fill="none" stroke="#1a2a1a" stroke-width="0.5">
-  <animate attributeName="opacity" values="0.3;0.1;0.3" dur="4s" repeatCount="indefinite" begin="3.17s"/>
+<circle cx="799" cy="73" r="5" fill="url(#alert-high)" filter="url(#red-glow)"/>
+<circle cx="799" cy="73" r="5" fill="#ff4400" opacity="0">
+  <animate attributeName="opacity" values="0;0.9;0;0.7;0" dur="0.9s" repeatCount="indefinite" begin="3.17s"/>
+</circle>
+<circle cx="799" cy="73" r="5" fill="none" stroke="#ff2200" stroke-width="2">
+  <animate attributeName="r" from="5" to="12" dur="1.27s" repeatCount="indefinite" begin="3.17s"/>
+  <animate attributeName="opacity" from="1" to="0" dur="1.27s" repeatCount="indefinite" begin="3.17s"/>
+  <animate attributeName="stroke-width" from="2.5" to="0.3" dur="1.27s" repeatCount="indefinite" begin="3.17s"/>
+</circle>
+<circle cx="799" cy="73" r="5" fill="none" stroke="#ff6600" stroke-width="1.5">
+  <animate attributeName="r" from="5" to="12" dur="1.27s" repeatCount="indefinite" begin="3.80s"/>
+  <animate attributeName="opacity" from="0.8" to="0" dur="1.27s" repeatCount="indefinite" begin="3.80s"/>
+</circle>
+<circle cx="799" cy="68" r="2.5" fill="#555" opacity="0" filter="url(#smoke-blur)">
+  <animate attributeName="cy" from="68" to="50" dur="1.52s" repeatCount="indefinite" begin="3.17s"/>
+  <animate attributeName="opacity" values="0;0.7;0" dur="1.52s" repeatCount="indefinite" begin="3.17s"/>
+  <animate attributeName="r" from="2.5" to="6.5" dur="1.52s" repeatCount="indefinite" begin="3.17s"/>
+</circle>
+<circle cx="801" cy="69" r="2" fill="#555" opacity="0" filter="url(#smoke-blur)">
+  <animate attributeName="cy" from="69" to="51" dur="1.52s" repeatCount="indefinite" begin="3.47s"/>
+  <animate attributeName="opacity" values="0;0.7;0" dur="1.52s" repeatCount="indefinite" begin="3.47s"/>
+  <animate attributeName="r" from="2" to="6" dur="1.52s" repeatCount="indefinite" begin="3.47s"/>
+</circle>
+<circle cx="797" cy="67" r="2" fill="#555" opacity="0" filter="url(#smoke-blur)">
+  <animate attributeName="cy" from="67" to="49" dur="1.52s" repeatCount="indefinite" begin="3.77s"/>
+  <animate attributeName="opacity" values="0;0.7;0" dur="1.52s" repeatCount="indefinite" begin="3.77s"/>
+  <animate attributeName="r" from="2" to="6" dur="1.52s" repeatCount="indefinite" begin="3.77s"/>
 </circle>
 <rect x="793" y="82" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="799" cy="88" r="4" fill="url(#quiet)"/>
-<circle cx="799" cy="88" r="3" fill="none" stroke="#1a2a1a" stroke-width="0.5">
-  <animate attributeName="opacity" values="0.3;0.1;0.3" dur="4s" repeatCount="indefinite" begin="3.28s"/>
+<circle cx="799" cy="88" r="5" fill="url(#alert-med)" filter="url(#orange-glow)"/>
+<circle cx="799" cy="88" r="5" fill="none" stroke="#ffaa00" stroke-width="1.5">
+  <animate attributeName="r" from="5" to="9" dur="1.32s" repeatCount="indefinite" begin="3.28s"/>
+  <animate attributeName="opacity" from="0.8" to="0" dur="1.32s" repeatCount="indefinite" begin="3.28s"/>
+  <animate attributeName="stroke-width" from="1.5" to="0.3" dur="1.32s" repeatCount="indefinite" begin="3.28s"/>
+</circle>
+<circle cx="799" cy="88" r="3" fill="#ffcc00" opacity="0">
+  <animate attributeName="opacity" values="0;0.6;0" dur="1.32s" repeatCount="indefinite" begin="3.28s"/>
+</circle>
+<circle cx="799" cy="83" r="2" fill="#3a3a3a" opacity="0" filter="url(#smoke-blur)">
+  <animate attributeName="cy" from="83" to="73" dur="1.32s" repeatCount="indefinite" begin="3.28s"/>
+  <animate attributeName="opacity" values="0;0.4;0" dur="1.32s" repeatCount="indefinite" begin="3.28s"/>
+  <animate attributeName="r" from="2" to="4" dur="1.32s" repeatCount="indefinite" begin="3.28s"/>
 </circle>
 <rect x="793" y="97" width="13" height="13" fill="#0a120a" rx="2"/>
 <circle cx="799" cy="103" r="4" fill="url(#quiet)"/>
@@ -1934,163 +1968,99 @@
   <animate attributeName="opacity" values="0.3;0.1;0.3" dur="4s" repeatCount="indefinite" begin="3.39s"/>
 </circle>
 <rect x="793" y="112" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="799" cy="118" r="4" fill="url(#quiet)"/>
-<circle cx="799" cy="118" r="3" fill="none" stroke="#1a2a1a" stroke-width="0.5">
-  <animate attributeName="opacity" values="0.3;0.1;0.3" dur="4s" repeatCount="indefinite" begin="3.50s"/>
+<circle cx="799" cy="118" r="5" fill="url(#alert-high)" filter="url(#red-glow)"/>
+<circle cx="799" cy="118" r="5" fill="#ff4400" opacity="0">
+  <animate attributeName="opacity" values="0;0.9;0;0.7;0" dur="0.9s" repeatCount="indefinite" begin="3.50s"/>
+</circle>
+<circle cx="799" cy="118" r="5" fill="none" stroke="#ff2200" stroke-width="2">
+  <animate attributeName="r" from="5" to="12" dur="1.42s" repeatCount="indefinite" begin="3.50s"/>
+  <animate attributeName="opacity" from="1" to="0" dur="1.42s" repeatCount="indefinite" begin="3.50s"/>
+  <animate attributeName="stroke-width" from="2.5" to="0.3" dur="1.42s" repeatCount="indefinite" begin="3.50s"/>
+</circle>
+<circle cx="799" cy="118" r="5" fill="none" stroke="#ff6600" stroke-width="1.5">
+  <animate attributeName="r" from="5" to="12" dur="1.42s" repeatCount="indefinite" begin="0.21s"/>
+  <animate attributeName="opacity" from="0.8" to="0" dur="1.42s" repeatCount="indefinite" begin="0.21s"/>
+</circle>
+<circle cx="799" cy="113" r="2.5" fill="#555" opacity="0" filter="url(#smoke-blur)">
+  <animate attributeName="cy" from="113" to="95" dur="1.70s" repeatCount="indefinite" begin="3.50s"/>
+  <animate attributeName="opacity" values="0;0.7;0" dur="1.70s" repeatCount="indefinite" begin="3.50s"/>
+  <animate attributeName="r" from="2.5" to="6.5" dur="1.70s" repeatCount="indefinite" begin="3.50s"/>
+</circle>
+<circle cx="801" cy="114" r="2" fill="#555" opacity="0" filter="url(#smoke-blur)">
+  <animate attributeName="cy" from="114" to="96" dur="1.70s" repeatCount="indefinite" begin="3.80s"/>
+  <animate attributeName="opacity" values="0;0.7;0" dur="1.70s" repeatCount="indefinite" begin="3.80s"/>
+  <animate attributeName="r" from="2" to="6" dur="1.70s" repeatCount="indefinite" begin="3.80s"/>
+</circle>
+<circle cx="797" cy="112" r="2" fill="#555" opacity="0" filter="url(#smoke-blur)">
+  <animate attributeName="cy" from="112" to="94" dur="1.70s" repeatCount="indefinite" begin="0.10s"/>
+  <animate attributeName="opacity" values="0;0.7;0" dur="1.70s" repeatCount="indefinite" begin="0.10s"/>
+  <animate attributeName="r" from="2" to="6" dur="1.70s" repeatCount="indefinite" begin="0.10s"/>
 </circle>
 <rect x="793" y="127" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="799" cy="133" r="4" fill="url(#quiet)"/>
-<circle cx="799" cy="133" r="3" fill="none" stroke="#1a2a1a" stroke-width="0.5">
-  <animate attributeName="opacity" values="0.3;0.1;0.3" dur="4s" repeatCount="indefinite" begin="3.61s"/>
+<circle cx="799" cy="133" r="5" fill="url(#alert-high)" filter="url(#red-glow)"/>
+<circle cx="799" cy="133" r="5" fill="#ff4400" opacity="0">
+  <animate attributeName="opacity" values="0;0.9;0;0.7;0" dur="0.9s" repeatCount="indefinite" begin="3.61s"/>
+</circle>
+<circle cx="799" cy="133" r="5" fill="none" stroke="#ff2200" stroke-width="2">
+  <animate attributeName="r" from="5" to="12" dur="1.47s" repeatCount="indefinite" begin="3.61s"/>
+  <animate attributeName="opacity" from="1" to="0" dur="1.47s" repeatCount="indefinite" begin="3.61s"/>
+  <animate attributeName="stroke-width" from="2.5" to="0.3" dur="1.47s" repeatCount="indefinite" begin="3.61s"/>
+</circle>
+<circle cx="799" cy="133" r="5" fill="none" stroke="#ff6600" stroke-width="1.5">
+  <animate attributeName="r" from="5" to="12" dur="1.47s" repeatCount="indefinite" begin="0.34s"/>
+  <animate attributeName="opacity" from="0.8" to="0" dur="1.47s" repeatCount="indefinite" begin="0.34s"/>
+</circle>
+<circle cx="799" cy="128" r="2.5" fill="#555" opacity="0" filter="url(#smoke-blur)">
+  <animate attributeName="cy" from="128" to="110" dur="1.76s" repeatCount="indefinite" begin="3.61s"/>
+  <animate attributeName="opacity" values="0;0.7;0" dur="1.76s" repeatCount="indefinite" begin="3.61s"/>
+  <animate attributeName="r" from="2.5" to="6.5" dur="1.76s" repeatCount="indefinite" begin="3.61s"/>
+</circle>
+<circle cx="801" cy="129" r="2" fill="#555" opacity="0" filter="url(#smoke-blur)">
+  <animate attributeName="cy" from="129" to="111" dur="1.76s" repeatCount="indefinite" begin="3.91s"/>
+  <animate attributeName="opacity" values="0;0.7;0" dur="1.76s" repeatCount="indefinite" begin="3.91s"/>
+  <animate attributeName="r" from="2" to="6" dur="1.76s" repeatCount="indefinite" begin="3.91s"/>
+</circle>
+<circle cx="797" cy="127" r="2" fill="#555" opacity="0" filter="url(#smoke-blur)">
+  <animate attributeName="cy" from="127" to="109" dur="1.76s" repeatCount="indefinite" begin="0.21s"/>
+  <animate attributeName="opacity" values="0;0.7;0" dur="1.76s" repeatCount="indefinite" begin="0.21s"/>
+  <animate attributeName="r" from="2" to="6" dur="1.76s" repeatCount="indefinite" begin="0.21s"/>
 </circle>
 <rect x="793" y="142" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="799" cy="148" r="4" fill="url(#quiet)"/>
-<circle cx="799" cy="148" r="3" fill="none" stroke="#1a2a1a" stroke-width="0.5">
-  <animate attributeName="opacity" values="0.3;0.1;0.3" dur="4s" repeatCount="indefinite" begin="3.72s"/>
+<circle cx="799" cy="148" r="5" fill="url(#alert-med)" filter="url(#orange-glow)"/>
+<circle cx="799" cy="148" r="5" fill="none" stroke="#ffaa00" stroke-width="1.5">
+  <animate attributeName="r" from="5" to="9" dur="1.52s" repeatCount="indefinite" begin="3.72s"/>
+  <animate attributeName="opacity" from="0.8" to="0" dur="1.52s" repeatCount="indefinite" begin="3.72s"/>
+  <animate attributeName="stroke-width" from="1.5" to="0.3" dur="1.52s" repeatCount="indefinite" begin="3.72s"/>
+</circle>
+<circle cx="799" cy="148" r="3" fill="#ffcc00" opacity="0">
+  <animate attributeName="opacity" values="0;0.6;0" dur="1.52s" repeatCount="indefinite" begin="3.72s"/>
+</circle>
+<circle cx="799" cy="143" r="2" fill="#3a3a3a" opacity="0" filter="url(#smoke-blur)">
+  <animate attributeName="cy" from="143" to="133" dur="1.52s" repeatCount="indefinite" begin="3.72s"/>
+  <animate attributeName="opacity" values="0;0.4;0" dur="1.52s" repeatCount="indefinite" begin="3.72s"/>
+  <animate attributeName="r" from="2" to="4" dur="1.52s" repeatCount="indefinite" begin="3.72s"/>
 </circle>
 <rect x="808" y="52" width="13" height="13" fill="#0a120a" rx="2"/>
 <circle cx="814" cy="58" r="4" fill="url(#quiet)"/>
 <circle cx="814" cy="58" r="3" fill="none" stroke="#1a2a1a" stroke-width="0.5">
   <animate attributeName="opacity" values="0.3;0.1;0.3" dur="4s" repeatCount="indefinite" begin="3.12s"/>
 </circle>
-<rect x="808" y="67" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="814" cy="73" r="5" fill="url(#alert-high)" filter="url(#red-glow)"/>
-<circle cx="814" cy="73" r="5" fill="#ff4400" opacity="0">
-  <animate attributeName="opacity" values="0;0.9;0;0.7;0" dur="0.9s" repeatCount="indefinite" begin="3.23s"/>
-</circle>
-<circle cx="814" cy="73" r="5" fill="none" stroke="#ff2200" stroke-width="2">
-  <animate attributeName="r" from="5" to="12" dur="1.29s" repeatCount="indefinite" begin="3.23s"/>
-  <animate attributeName="opacity" from="1" to="0" dur="1.29s" repeatCount="indefinite" begin="3.23s"/>
-  <animate attributeName="stroke-width" from="2.5" to="0.3" dur="1.29s" repeatCount="indefinite" begin="3.23s"/>
-</circle>
-<circle cx="814" cy="73" r="5" fill="none" stroke="#ff6600" stroke-width="1.5">
-  <animate attributeName="r" from="5" to="12" dur="1.29s" repeatCount="indefinite" begin="3.88s"/>
-  <animate attributeName="opacity" from="0.8" to="0" dur="1.29s" repeatCount="indefinite" begin="3.88s"/>
-</circle>
-<circle cx="814" cy="68" r="2.5" fill="#555" opacity="0" filter="url(#smoke-blur)">
-  <animate attributeName="cy" from="68" to="50" dur="1.55s" repeatCount="indefinite" begin="3.23s"/>
-  <animate attributeName="opacity" values="0;0.7;0" dur="1.55s" repeatCount="indefinite" begin="3.23s"/>
-  <animate attributeName="r" from="2.5" to="6.5" dur="1.55s" repeatCount="indefinite" begin="3.23s"/>
-</circle>
-<circle cx="816" cy="69" r="2" fill="#555" opacity="0" filter="url(#smoke-blur)">
-  <animate attributeName="cy" from="69" to="51" dur="1.55s" repeatCount="indefinite" begin="3.53s"/>
-  <animate attributeName="opacity" values="0;0.7;0" dur="1.55s" repeatCount="indefinite" begin="3.53s"/>
-  <animate attributeName="r" from="2" to="6" dur="1.55s" repeatCount="indefinite" begin="3.53s"/>
-</circle>
-<circle cx="812" cy="67" r="2" fill="#555" opacity="0" filter="url(#smoke-blur)">
-  <animate attributeName="cy" from="67" to="49" dur="1.55s" repeatCount="indefinite" begin="3.83s"/>
-  <animate attributeName="opacity" values="0;0.7;0" dur="1.55s" repeatCount="indefinite" begin="3.83s"/>
-  <animate attributeName="r" from="2" to="6" dur="1.55s" repeatCount="indefinite" begin="3.83s"/>
-</circle>
-<rect x="808" y="82" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="814" cy="88" r="5" fill="url(#alert-med)" filter="url(#orange-glow)"/>
-<circle cx="814" cy="88" r="5" fill="none" stroke="#ffaa00" stroke-width="1.5">
-  <animate attributeName="r" from="5" to="9" dur="1.34s" repeatCount="indefinite" begin="3.34s"/>
-  <animate attributeName="opacity" from="0.8" to="0" dur="1.34s" repeatCount="indefinite" begin="3.34s"/>
-  <animate attributeName="stroke-width" from="1.5" to="0.3" dur="1.34s" repeatCount="indefinite" begin="3.34s"/>
-</circle>
-<circle cx="814" cy="88" r="3" fill="#ffcc00" opacity="0">
-  <animate attributeName="opacity" values="0;0.6;0" dur="1.34s" repeatCount="indefinite" begin="3.34s"/>
-</circle>
-<circle cx="814" cy="83" r="2" fill="#3a3a3a" opacity="0" filter="url(#smoke-blur)">
-  <animate attributeName="cy" from="83" to="73" dur="1.34s" repeatCount="indefinite" begin="3.34s"/>
-  <animate attributeName="opacity" values="0;0.4;0" dur="1.34s" repeatCount="indefinite" begin="3.34s"/>
-  <animate attributeName="r" from="2" to="4" dur="1.34s" repeatCount="indefinite" begin="3.34s"/>
-</circle>
-<rect x="808" y="97" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="814" cy="103" r="4" fill="url(#quiet)"/>
-<circle cx="814" cy="103" r="3" fill="none" stroke="#1a2a1a" stroke-width="0.5">
-  <animate attributeName="opacity" values="0.3;0.1;0.3" dur="4s" repeatCount="indefinite" begin="3.45s"/>
-</circle>
-<rect x="808" y="112" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="814" cy="118" r="5" fill="url(#alert-high)" filter="url(#red-glow)"/>
-<circle cx="814" cy="118" r="5" fill="#ff4400" opacity="0">
-  <animate attributeName="opacity" values="0;0.9;0;0.7;0" dur="0.9s" repeatCount="indefinite" begin="3.56s"/>
-</circle>
-<circle cx="814" cy="118" r="5" fill="none" stroke="#ff2200" stroke-width="2">
-  <animate attributeName="r" from="5" to="12" dur="1.44s" repeatCount="indefinite" begin="3.56s"/>
-  <animate attributeName="opacity" from="1" to="0" dur="1.44s" repeatCount="indefinite" begin="3.56s"/>
-  <animate attributeName="stroke-width" from="2.5" to="0.3" dur="1.44s" repeatCount="indefinite" begin="3.56s"/>
-</circle>
-<circle cx="814" cy="118" r="5" fill="none" stroke="#ff6600" stroke-width="1.5">
-  <animate attributeName="r" from="5" to="12" dur="1.44s" repeatCount="indefinite" begin="0.28s"/>
-  <animate attributeName="opacity" from="0.8" to="0" dur="1.44s" repeatCount="indefinite" begin="0.28s"/>
-</circle>
-<circle cx="814" cy="113" r="2.5" fill="#555" opacity="0" filter="url(#smoke-blur)">
-  <animate attributeName="cy" from="113" to="95" dur="1.73s" repeatCount="indefinite" begin="3.56s"/>
-  <animate attributeName="opacity" values="0;0.7;0" dur="1.73s" repeatCount="indefinite" begin="3.56s"/>
-  <animate attributeName="r" from="2.5" to="6.5" dur="1.73s" repeatCount="indefinite" begin="3.56s"/>
-</circle>
-<circle cx="816" cy="114" r="2" fill="#555" opacity="0" filter="url(#smoke-blur)">
-  <animate attributeName="cy" from="114" to="96" dur="1.73s" repeatCount="indefinite" begin="3.86s"/>
-  <animate attributeName="opacity" values="0;0.7;0" dur="1.73s" repeatCount="indefinite" begin="3.86s"/>
-  <animate attributeName="r" from="2" to="6" dur="1.73s" repeatCount="indefinite" begin="3.86s"/>
-</circle>
-<circle cx="812" cy="112" r="2" fill="#555" opacity="0" filter="url(#smoke-blur)">
-  <animate attributeName="cy" from="112" to="94" dur="1.73s" repeatCount="indefinite" begin="0.16s"/>
-  <animate attributeName="opacity" values="0;0.7;0" dur="1.73s" repeatCount="indefinite" begin="0.16s"/>
-  <animate attributeName="r" from="2" to="6" dur="1.73s" repeatCount="indefinite" begin="0.16s"/>
-</circle>
-<rect x="808" y="127" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="814" cy="133" r="5" fill="url(#alert-high)" filter="url(#red-glow)"/>
-<circle cx="814" cy="133" r="5" fill="#ff4400" opacity="0">
-  <animate attributeName="opacity" values="0;0.9;0;0.7;0" dur="0.9s" repeatCount="indefinite" begin="3.67s"/>
-</circle>
-<circle cx="814" cy="133" r="5" fill="none" stroke="#ff2200" stroke-width="2">
-  <animate attributeName="r" from="5" to="12" dur="1.49s" repeatCount="indefinite" begin="3.67s"/>
-  <animate attributeName="opacity" from="1" to="0" dur="1.49s" repeatCount="indefinite" begin="3.67s"/>
-  <animate attributeName="stroke-width" from="2.5" to="0.3" dur="1.49s" repeatCount="indefinite" begin="3.67s"/>
-</circle>
-<circle cx="814" cy="133" r="5" fill="none" stroke="#ff6600" stroke-width="1.5">
-  <animate attributeName="r" from="5" to="12" dur="1.49s" repeatCount="indefinite" begin="0.42s"/>
-  <animate attributeName="opacity" from="0.8" to="0" dur="1.49s" repeatCount="indefinite" begin="0.42s"/>
-</circle>
-<circle cx="814" cy="128" r="2.5" fill="#555" opacity="0" filter="url(#smoke-blur)">
-  <animate attributeName="cy" from="128" to="110" dur="1.79s" repeatCount="indefinite" begin="3.67s"/>
-  <animate attributeName="opacity" values="0;0.7;0" dur="1.79s" repeatCount="indefinite" begin="3.67s"/>
-  <animate attributeName="r" from="2.5" to="6.5" dur="1.79s" repeatCount="indefinite" begin="3.67s"/>
-</circle>
-<circle cx="816" cy="129" r="2" fill="#555" opacity="0" filter="url(#smoke-blur)">
-  <animate attributeName="cy" from="129" to="111" dur="1.79s" repeatCount="indefinite" begin="3.97s"/>
-  <animate attributeName="opacity" values="0;0.7;0" dur="1.79s" repeatCount="indefinite" begin="3.97s"/>
-  <animate attributeName="r" from="2" to="6" dur="1.79s" repeatCount="indefinite" begin="3.97s"/>
-</circle>
-<circle cx="812" cy="127" r="2" fill="#555" opacity="0" filter="url(#smoke-blur)">
-  <animate attributeName="cy" from="127" to="109" dur="1.79s" repeatCount="indefinite" begin="0.27s"/>
-  <animate attributeName="opacity" values="0;0.7;0" dur="1.79s" repeatCount="indefinite" begin="0.27s"/>
-  <animate attributeName="r" from="2" to="6" dur="1.79s" repeatCount="indefinite" begin="0.27s"/>
-</circle>
-<rect x="808" y="142" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="814" cy="148" r="5" fill="url(#alert-med)" filter="url(#orange-glow)"/>
-<circle cx="814" cy="148" r="5" fill="none" stroke="#ffaa00" stroke-width="1.5">
-  <animate attributeName="r" from="5" to="9" dur="1.54s" repeatCount="indefinite" begin="3.78s"/>
-  <animate attributeName="opacity" from="0.8" to="0" dur="1.54s" repeatCount="indefinite" begin="3.78s"/>
-  <animate attributeName="stroke-width" from="1.5" to="0.3" dur="1.54s" repeatCount="indefinite" begin="3.78s"/>
-</circle>
-<circle cx="814" cy="148" r="3" fill="#ffcc00" opacity="0">
-  <animate attributeName="opacity" values="0;0.6;0" dur="1.54s" repeatCount="indefinite" begin="3.78s"/>
-</circle>
-<circle cx="814" cy="143" r="2" fill="#3a3a3a" opacity="0" filter="url(#smoke-blur)">
-  <animate attributeName="cy" from="143" to="133" dur="1.54s" repeatCount="indefinite" begin="3.78s"/>
-  <animate attributeName="opacity" values="0;0.4;0" dur="1.54s" repeatCount="indefinite" begin="3.78s"/>
-  <animate attributeName="r" from="2" to="4" dur="1.54s" repeatCount="indefinite" begin="3.78s"/>
-</circle>
 <text x="23" y="76" text-anchor="end" fill="#2a4a2a" font-family="monospace" font-size="7">Mon</text>
 <text x="23" y="106" text-anchor="end" fill="#2a4a2a" font-family="monospace" font-size="7">Wed</text>
 <text x="23" y="136" text-anchor="end" fill="#2a4a2a" font-family="monospace" font-size="7">Fri</text>
-<text x="28" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Mar</text>
-<text x="43" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Apr</text>
-<text x="103" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">May</text>
-<text x="163" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Jun</text>
-<text x="238" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Jul</text>
-<text x="298" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Aug</text>
-<text x="373" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Sep</text>
-<text x="433" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Oct</text>
-<text x="493" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Nov</text>
-<text x="568" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Dec</text>
-<text x="628" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Jan</text>
-<text x="688" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Feb</text>
-<text x="748" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Mar</text>
+<text x="28" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Apr</text>
+<text x="88" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">May</text>
+<text x="148" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Jun</text>
+<text x="223" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Jul</text>
+<text x="283" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Aug</text>
+<text x="358" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Sep</text>
+<text x="418" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Oct</text>
+<text x="478" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Nov</text>
+<text x="553" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Dec</text>
+<text x="613" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Jan</text>
+<text x="673" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Feb</text>
+<text x="733" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Mar</text>
+<text x="808" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Apr</text>
 <circle cx="32" cy="174" r="3" fill="url(#quiet)"/>
 <text x="38" y="177" fill="#2a4a2a" font-family="monospace" font-size="7">QUIET</text>
 <circle cx="74" cy="174" r="3" fill="url(#alert-med)" filter="url(#orange-glow)"/>
