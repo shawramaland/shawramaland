@@ -1,10 +1,8 @@
-# Hello there, I'm Garry 👋
+# Hey, I'm Gershon (Garry) Zmora 👋
 
-**Google Certified Cloud Engineer**  
-
-I have 3 years of experience working with GCP infrastructure, including Compute Engine, VPC, IAM, and Kubernetes, supporting enterprise customers at scale.  
-
-Currently transitioning into system administration, IT infrastructure, and cloud operations, while also exploring cybersecurity.
+**Google-certified Cloud Engineer** based in Israel.  
+3 years working with GCP infrastructure — Compute Engine, VPC, IAM, Kubernetes — supporting enterprise customers at scale.  
+Now transitioning into sysadmin, IT infrastructure, and cloud operations while picking up cybersecurity on the side.
 
 ---
 
@@ -49,11 +47,18 @@ Currently transitioning into system administration, IT infrastructure, and cloud
 
 ---
 
-## Naval Command — Contribution Grid
+## Background
 
-> Every contribution is a shot fired. Every streak is a ship sunk.
+Ex-Israel Air Force — Helicopter Mechanic and Rescue Team Leader.  
+Learned to stay calm when things break under pressure. Still applies.
 
-![Battleship Contribution Graph](battleship.svg)
+---
+
+## Frontline — Contribution Grid
+
+> Every contribution is an operation. Every streak is a mission complete.
+
+![Frontline Contribution Graph](https://raw.githubusercontent.com/shawramaland/Garry-gershon/main/battleship.svg)
 
 ---
 
