@@ -58,7 +58,7 @@ Learned to stay calm when things break under pressure. Still applies.
 
 > Every contribution is an operation. Every streak is a mission complete.
 
-![Frontline Contribution Graph](https://raw.githubusercontent.com/shawramaland/Garry-gershon/main/battleship.svg)
+![Frontline Contribution Graph](battleship.svg)
 
 ---
 
