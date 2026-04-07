@@ -24,12 +24,13 @@ Currently transitioning into sysadmin, IT infrastructure, and cloud operations, 
 <a href="https://www.docker.com"><img src="https://skillicons.dev/icons?i=docker&theme=dark" alt="Docker" /></a>
 <a href="https://kubernetes.io"><img src="https://skillicons.dev/icons?i=kubernetes&theme=dark" alt="Kubernetes" /></a>
 <a href="https://git-scm.com"><img src="https://skillicons.dev/icons?i=git&theme=dark" alt="Git" /></a>
+<a href="https://nodejs.org"><img src="https://skillicons.dev/icons?i=nodejs&theme=dark" alt="Node.js" /></a>
+<a href="https://www.npmjs.com"><img src="https://skillicons.dev/icons?i=npm&theme=dark" alt="npm" /></a>
 
 **Languages**
 
 <a href="https://www.python.org"><img src="https://skillicons.dev/icons?i=python&theme=dark" alt="Python" /></a>
 <a href="https://www.java.com"><img src="https://skillicons.dev/icons?i=java&theme=dark" alt="Java" /></a>
-<a href="https://nodejs.org"><img src="https://skillicons.dev/icons?i=nodejs&theme=dark" alt="Node.js" /></a>
 
 **Operating Systems & Editors**
 
