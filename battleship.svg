@@ -771,6 +771,8 @@
 <circle cx="814" cy="58" r="5" class="rh2" style="animation-delay:0.19s"/>
 <rect x="808" y="67" width="13" height="13" fill="#0a120a" rx="2"/>
 <circle cx="814" cy="73" r="4" fill="url(#gq)"/>
+<rect x="808" y="82" width="13" height="13" fill="#0a120a" rx="2"/>
+<circle cx="814" cy="88" r="4" fill="url(#gq)"/>
 <text x="23" y="76" text-anchor="end" fill="#2a4a2a" font-family="monospace" font-size="7">Mon</text>
 <text x="23" y="106" text-anchor="end" fill="#2a4a2a" font-family="monospace" font-size="7">Wed</text>
 <text x="23" y="136" text-anchor="end" fill="#2a4a2a" font-family="monospace" font-size="7">Fri</text>
