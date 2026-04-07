@@ -87,20 +87,6 @@ def generate_svg(weeks, total):
     out.append(f'<rect x="{width-80}" y="6" width="65" height="14" fill="#1a0000" rx="2" stroke="#ff2200" stroke-width="0.5"/>')
     out.append(f'<text x="{width-47}" y="16" text-anchor="middle" fill="#ff2200" font-family="monospace" font-size="7" font-weight="bold" class="al">● ALERT ACTIVE</text>')
 
-    # ── BULLET TRACERS ──────────────────────────────────────────────────────
-    tracers = [
-        (1, "3s",   "0s",    "ltr", "#ffff44", 35, 1.5),
-        (3, "2s",   "0.8s",  "rtl", "#ffcc00", 25, 1.5),
-        (5, "2.5s", "1.5s",  "ltr", "#ffffff", 20, 1.0),
-        (0, "4s",   "2s",    "rtl", "#ffaa00", 30, 1.0),
-    ]
-    for row, dur, begin, direction, color, bw, bh in tracers:
-        ty = TOP_PAD + row * STEP + CELL // 2
-        fx = -bw if direction == "ltr" else width + bw
-        tx = width + bw if direction == "ltr" else -bw
-        hx = bw if direction == "ltr" else 0
-        out.append(f'<g overflow="visible"><rect x="0" y="{ty-bh/2:.1f}" width="{bw}" height="{bh}" fill="{color}" opacity="0.9" rx="1"/><circle cx="{hx}" cy="{ty}" r="{bh+0.5:.1f}" fill="white" opacity="0.95"/><animateTransform attributeName="transform" type="translate" from="{fx} 0" to="{tx} 0" dur="{dur}" repeatCount="indefinite" begin="{begin}"/></g>')
-
     # ── GRID CELLS ──────────────────────────────────────────────────────────
     for wi, week in enumerate(weeks):
         for day in week["contributionDays"]:
@@ -131,6 +117,20 @@ def generate_svg(weeks, total):
                 out.append(f'<circle cx="{cx}" cy="{cy}" r="{rv}" class="rh" style="animation-delay:{delay}"/>')
                 delay2 = f"{(float(delay[:-1])+0.55)%4:.2f}s"
                 out.append(f'<circle cx="{cx}" cy="{cy}" r="{rv}" class="rh2" style="animation-delay:{delay2}"/>')
+
+    # ── BULLET TRACERS (drawn after grid so they appear on top) ─────────────
+    tracers = [
+        (1, "3s",   "0s",    "ltr", "#ffff44", 35, 1.5),
+        (3, "2s",   "0.8s",  "rtl", "#ffcc00", 25, 1.5),
+        (5, "2.5s", "1.5s",  "ltr", "#ffffff", 20, 1.0),
+        (0, "4s",   "2s",    "rtl", "#ffaa00", 30, 1.0),
+    ]
+    for row, dur, begin, direction, color, bw, bh in tracers:
+        ty = TOP_PAD + row * STEP + CELL // 2
+        fx = -bw if direction == "ltr" else width + bw
+        tx = width + bw if direction == "ltr" else -bw
+        hx = bw if direction == "ltr" else 0
+        out.append(f'<g overflow="visible"><rect x="0" y="{ty-bh/2:.1f}" width="{bw}" height="{bh}" fill="{color}" opacity="0.9" rx="1"/><circle cx="{hx}" cy="{ty}" r="{bh+0.5:.1f}" fill="white" opacity="0.95"/><animateTransform attributeName="transform" type="translate" from="{fx} 0" to="{tx} 0" dur="{dur}" repeatCount="indefinite" begin="{begin}"/></g>')
 
     # ── DAY LABELS ──────────────────────────────────────────────────────────
     for i, label in enumerate(day_labels):
