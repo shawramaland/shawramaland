@@ -33,6 +33,7 @@ Currently transitioning into sysadmin, IT infrastructure, and cloud operations, 
 
 <a href="https://www.python.org"><img src="https://skillicons.dev/icons?i=python&theme=dark" alt="Python" /></a>
 <a href="https://www.java.com"><img src="https://skillicons.dev/icons?i=java&theme=dark" alt="Java" /></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://skillicons.dev/icons?i=js&theme=dark" alt="JavaScript" /></a>
 
 **Operating Systems & Editors**
 
