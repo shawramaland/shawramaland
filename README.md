@@ -20,15 +20,22 @@ Currently transitioning into sysadmin, IT infrastructure, and cloud operations, 
 
 **Tools & Infrastructure**
 
-[![Tools](https://skillicons.dev/icons?i=gcp,docker,kubernetes,git&theme=dark&perline=5)](https://skillicons.dev)
+<a href="https://cloud.google.com"><img src="https://skillicons.dev/icons?i=gcp&theme=dark" alt="GCP" /></a>
+<a href="https://www.docker.com"><img src="https://skillicons.dev/icons?i=docker&theme=dark" alt="Docker" /></a>
+<a href="https://kubernetes.io"><img src="https://skillicons.dev/icons?i=kubernetes&theme=dark" alt="Kubernetes" /></a>
+<a href="https://git-scm.com"><img src="https://skillicons.dev/icons?i=git&theme=dark" alt="Git" /></a>
 
 **Languages**
 
-[![Languages](https://skillicons.dev/icons?i=python,java&theme=dark&perline=5)](https://skillicons.dev)
+<a href="https://www.python.org"><img src="https://skillicons.dev/icons?i=python&theme=dark" alt="Python" /></a>
+<a href="https://www.java.com"><img src="https://skillicons.dev/icons?i=java&theme=dark" alt="Java" /></a>
+<a href="https://nodejs.org"><img src="https://skillicons.dev/icons?i=nodejs&theme=dark" alt="Node.js" /></a>
 
 **Operating Systems & Editors**
 
-[![OS](https://skillicons.dev/icons?i=linux,windows,vscode&theme=dark&perline=5)](https://skillicons.dev)
+<a href="https://www.linux.org"><img src="https://skillicons.dev/icons?i=linux&theme=dark" alt="Linux" /></a>
+<a href="https://www.microsoft.com/windows"><img src="https://skillicons.dev/icons?i=windows&theme=dark" alt="Windows" /></a>
+<a href="https://code.visualstudio.com"><img src="https://skillicons.dev/icons?i=vscode&theme=dark" alt="VS Code" /></a>
 
 ---
 
