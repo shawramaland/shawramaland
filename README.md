@@ -26,6 +26,8 @@ Currently transitioning into sysadmin, IT infrastructure, and cloud operations, 
 <a href="https://git-scm.com"><img src="https://skillicons.dev/icons?i=git&theme=dark" alt="Git" /></a>
 <a href="https://nodejs.org"><img src="https://skillicons.dev/icons?i=nodejs&theme=dark" alt="Node.js" /></a>
 <a href="https://www.npmjs.com"><img src="https://skillicons.dev/icons?i=npm&theme=dark" alt="npm" /></a>
+<a href="https://www.gnu.org/software/bash/"><img src="https://skillicons.dev/icons?i=bash&theme=dark" alt="Bash" /></a>
+<a href="https://learn.microsoft.com/en-us/powershell/"><img src="https://skillicons.dev/icons?i=powershell&theme=dark" alt="PowerShell" /></a>
 
 **Languages**
 
