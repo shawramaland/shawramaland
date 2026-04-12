@@ -46,7 +46,7 @@
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
       display: flex; align-items: center; justify-content: space-between;
-      padding: 0 40px; height: 56px;
+      padding: 0 60px; height: 60px;
     }
     .nav-logo {
       font-family: var(--mono);
@@ -66,7 +66,7 @@
     .nav-links a:hover { color: var(--text); }
 
     /* ── SECTIONS ── */
-    section { max-width: 860px; margin: 0 auto; padding: 100px 24px; }
+    section { max-width: 1100px; margin: 0 auto; padding: 100px 48px; }
     section:first-of-type { padding-top: 140px; }
 
     .section-label {
@@ -91,10 +91,57 @@
     #hero {
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding-top: 56px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 48px;
+      padding-top: 60px;
     }
+    .hero-left {
+      flex: 1;
+      min-width: 0;
+    }
+    .hero-right {
+      flex: 0 0 360px;
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .terminal-bar {
+      background: var(--surface2);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .terminal-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+    }
+    .terminal-dot.red   { background: #e63946; }
+    .terminal-dot.yellow{ background: #f59e0b; }
+    .terminal-dot.green { background: #4ade80; }
+    .terminal-title {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      margin-left: 4px;
+    }
+    .terminal-body {
+      padding: 20px;
+      font-family: var(--mono);
+      font-size: 12px;
+      line-height: 2;
+      color: #555;
+    }
+    .t-prompt { color: var(--accent); }
+    .t-cmd    { color: #888; }
+    .t-out    { color: #4ade80; }
+    .t-out2   { color: #60a5fa; }
+    .t-dim    { color: #333; }
+    #terminal-cursor { animation: blink 1s step-end infinite; }
 
     .hero-prompt {
       font-family: var(--mono);
@@ -200,7 +247,7 @@
     /* ── ABOUT ── */
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
     }
     .about-card {
@@ -224,6 +271,11 @@
     }
 
     /* ── SKILLS ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 40px;
+    }
     .skills-group { margin-bottom: 28px; }
     .skills-group-label {
       font-family: var(--mono);
@@ -488,15 +540,22 @@
     }
 
     /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      #hero { flex-direction: column; padding-top: 80px; }
+      .hero-right { flex: none; width: 100%; max-width: 480px; }
+      .about-grid { grid-template-columns: 1fr 1fr; }
+      .skills-grid { grid-template-columns: 1fr; }
+    }
     @media (max-width: 640px) {
       nav { padding: 0 20px; }
-      .nav-links { gap: 16px; }
+      .nav-links { gap: 14px; }
       .nav-links a { font-size: 11px; }
       section { padding: 80px 20px; }
       .about-grid { grid-template-columns: 1fr; }
       .projects-grid { grid-template-columns: 1fr; }
       .project-card.featured { grid-template-columns: 1fr; }
       .hero-name { font-size: 36px; }
+      .hero-right { display: none; }
     }
   </style>
 </head>
@@ -516,25 +575,52 @@
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-prompt">portfolio.sh — v1.0</div>
-    <div class="hero-name">Gershon<br /><span>(Garry)</span> Zmora</div>
-    <div class="hero-title" id="typewriter"><span class="cursor"></span></div>
-    <p class="hero-summary">
-      Google-certified Cloud Engineer with 3 years of experience in GCP infrastructure,
-      incident resolution, and enterprise technical support. Transitioning into
-      sysadmin, IT infrastructure, and cloud operations. Ex-Israel Air Force.
-    </p>
-    <div class="hero-badges">
-      <span class="badge highlight">☁️ Google ACE Certified</span>
-      <span class="badge">🌐 GCP · Linux · Windows</span>
-      <span class="badge">🐋 Docker · Kubernetes</span>
-      <span class="badge">📍 Rishon LeZion, Israel</span>
-      <span class="badge">🌍 EN · HE · RU</span>
+    <div class="hero-left">
+      <div class="hero-prompt">portfolio.sh — v1.0</div>
+      <div class="hero-name">Gershon<br /><span>(Garry)</span> Zmora</div>
+      <div class="hero-title" id="typewriter"><span class="cursor"></span></div>
+      <p class="hero-summary">
+        Google-certified Cloud Engineer with 3 years of experience in GCP infrastructure,
+        incident resolution, and enterprise technical support. Transitioning into
+        sysadmin, IT infrastructure, and cloud operations. Ex-Israel Air Force.
+      </p>
+      <div class="hero-badges">
+        <span class="badge highlight">☁️ Google ACE Certified</span>
+        <span class="badge">🌐 GCP · Linux · Windows</span>
+        <span class="badge">🐋 Docker · Kubernetes</span>
+        <span class="badge">📍 Rishon LeZion, Israel</span>
+        <span class="badge">🌍 EN · HE · RU</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="mailto:garryzmora@gmail.com">Get in touch</a>
+        <a class="btn btn-secondary" href="https://github.com/shawramaland" target="_blank">GitHub</a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/in/gershon-zmora" target="_blank">LinkedIn</a>
+      </div>
     </div>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="mailto:garryzmora@gmail.com">Get in touch</a>
-      <a class="btn btn-secondary" href="https://github.com/shawramaland" target="_blank">GitHub</a>
-      <a class="btn btn-secondary" href="https://www.linkedin.com/in/gershon-zmora" target="_blank">LinkedIn</a>
+    <div class="hero-right">
+      <div class="terminal-bar">
+        <div class="terminal-dot red"></div>
+        <div class="terminal-dot yellow"></div>
+        <div class="terminal-dot green"></div>
+        <span class="terminal-title">garry@zmora: ~</span>
+      </div>
+      <div class="terminal-body">
+        <div><span class="t-prompt">garry@zmora</span><span class="t-dim">:</span><span class="t-out2">~</span><span class="t-dim">$</span> <span class="t-cmd">whoami</span></div>
+        <div><span class="t-out">Gershon (Garry) Zmora</span></div>
+        <div>&nbsp;</div>
+        <div><span class="t-prompt">garry@zmora</span><span class="t-dim">:</span><span class="t-out2">~</span><span class="t-dim">$</span> <span class="t-cmd">cat skills.txt</span></div>
+        <div><span class="t-out">GCP · Docker · Kubernetes</span></div>
+        <div><span class="t-out">Linux · Bash · Python</span></div>
+        <div><span class="t-out">CI/CD · Git · Networking</span></div>
+        <div>&nbsp;</div>
+        <div><span class="t-prompt">garry@zmora</span><span class="t-dim">:</span><span class="t-out2">~</span><span class="t-dim">$</span> <span class="t-cmd">docker pull bazingalol/job-tracker</span></div>
+        <div><span class="t-out2">latest: Pulling from bazingalol/job-tracker</span></div>
+        <div><span class="t-out">✔ Pull complete</span></div>
+        <div>&nbsp;</div>
+        <div><span class="t-prompt">garry@zmora</span><span class="t-dim">:</span><span class="t-out2">~</span><span class="t-dim">$</span> <span class="t-cmd">echo $STATUS</span></div>
+        <div><span class="t-out">open_to_work=true</span></div>
+        <div><span class="t-out2" id="terminal-cursor">▋</span></div>
+      </div>
     </div>
   </section>
 
@@ -585,63 +671,65 @@
     <div class="section-label">// skills</div>
     <h2>What I Work With</h2>
 
-    <div class="skills-group">
-      <div class="skills-group-label">Cloud & Infrastructure</div>
-      <div class="skills-list">
-        <span class="skill-tag">GCP</span>
-        <span class="skill-tag">Compute Engine</span>
-        <span class="skill-tag">VPC</span>
-        <span class="skill-tag">IAM</span>
-        <span class="skill-tag">GKE</span>
-        <span class="skill-tag">Cloud Logging</span>
-        <span class="skill-tag">gcloud CLI</span>
-        <span class="skill-tag">Google Workspace Admin</span>
+    <div class="skills-grid">
+      <div class="skills-group">
+        <div class="skills-group-label">Cloud & Infrastructure</div>
+        <div class="skills-list">
+          <span class="skill-tag">GCP</span>
+          <span class="skill-tag">Compute Engine</span>
+          <span class="skill-tag">VPC</span>
+          <span class="skill-tag">IAM</span>
+          <span class="skill-tag">GKE</span>
+          <span class="skill-tag">Cloud Logging</span>
+          <span class="skill-tag">gcloud CLI</span>
+          <span class="skill-tag">Google Workspace Admin</span>
+        </div>
       </div>
-    </div>
 
-    <div class="skills-group">
-      <div class="skills-group-label">Containers & DevOps</div>
-      <div class="skills-list">
-        <span class="skill-tag">Docker</span>
-        <span class="skill-tag">Kubernetes</span>
-        <span class="skill-tag">CI/CD</span>
-        <span class="skill-tag">GitHub Actions</span>
-        <span class="skill-tag">Git</span>
-        <span class="skill-tag">Docker Hub</span>
+      <div class="skills-group">
+        <div class="skills-group-label">Containers & DevOps</div>
+        <div class="skills-list">
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Kubernetes</span>
+          <span class="skill-tag">CI/CD</span>
+          <span class="skill-tag">GitHub Actions</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">Docker Hub</span>
+        </div>
       </div>
-    </div>
 
-    <div class="skills-group">
-      <div class="skills-group-label">Operating Systems & Networking</div>
-      <div class="skills-list">
-        <span class="skill-tag">Linux (Ubuntu, CentOS)</span>
-        <span class="skill-tag">Windows 10/11</span>
-        <span class="skill-tag">TCP/IP</span>
-        <span class="skill-tag">DNS</span>
-        <span class="skill-tag">VPN</span>
-        <span class="skill-tag">Firewall Rules</span>
-        <span class="skill-tag">SSH</span>
-        <span class="skill-tag">Active Directory</span>
+      <div class="skills-group">
+        <div class="skills-group-label">Operating Systems & Networking</div>
+        <div class="skills-list">
+          <span class="skill-tag">Linux (Ubuntu, CentOS)</span>
+          <span class="skill-tag">Windows 10/11</span>
+          <span class="skill-tag">TCP/IP</span>
+          <span class="skill-tag">DNS</span>
+          <span class="skill-tag">VPN</span>
+          <span class="skill-tag">Firewall Rules</span>
+          <span class="skill-tag">SSH</span>
+          <span class="skill-tag">Active Directory</span>
+        </div>
       </div>
-    </div>
 
-    <div class="skills-group">
-      <div class="skills-group-label">Scripting & Languages</div>
-      <div class="skills-list">
-        <span class="skill-tag">Bash</span>
-        <span class="skill-tag">PowerShell</span>
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">React</span>
+      <div class="skills-group">
+        <div class="skills-group-label">Scripting & Languages</div>
+        <div class="skills-list">
+          <span class="skill-tag">Bash</span>
+          <span class="skill-tag">PowerShell</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">React</span>
+        </div>
       </div>
-    </div>
 
-    <div class="skills-group">
-      <div class="skills-group-label">Currently Learning</div>
-      <div class="skills-list">
-        <span class="skill-tag">Cybersecurity (TryHackMe)</span>
-        <span class="skill-tag">Windows Server</span>
-        <span class="skill-tag">Security+</span>
+      <div class="skills-group">
+        <div class="skills-group-label">Currently Learning</div>
+        <div class="skills-list">
+          <span class="skill-tag">Cybersecurity (TryHackMe)</span>
+          <span class="skill-tag">Windows Server</span>
+          <span class="skill-tag">Security+</span>
+        </div>
       </div>
     </div>
   </section>
