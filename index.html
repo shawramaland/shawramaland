@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garry Zmora — IT & Cloud Infrastructure</title>
+  <meta name="description" content="Google-certified Cloud Engineer transitioning into sysadmin, IT infrastructure, and cloud operations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0a0a0a;
+      --surface:  #111111;
+      --surface2: #181818;
+      --border:   #1e1e1e;
+      --border2:  #2a2a2a;
+      --text:     #e8e8e8;
+      --muted:    #666;
+      --dim:      #333;
+      --accent:   #e63946;
+      --accent2:  #ff4757;
+      --green:    #4ade80;
+      --mono:     'JetBrains Mono', 'Fira Code', monospace;
+      --sans:     'Inter', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent2); }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10,10,10,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 56px;
+    }
+    .nav-logo {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── SECTIONS ── */
+    section { max-width: 860px; margin: 0 auto; padding: 100px 24px; }
+    section:first-of-type { padding-top: 140px; }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 32px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 56px;
+    }
+
+    .hero-prompt {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-prompt::before {
+      content: "▶";
+      color: var(--accent);
+      font-size: 10px;
+    }
+
+    .hero-name {
+      font-family: var(--mono);
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .hero-name span { color: var(--accent); }
+
+    .hero-title {
+      font-family: var(--mono);
+      font-size: clamp(14px, 2vw, 18px);
+      color: var(--muted);
+      margin-bottom: 24px;
+      min-height: 28px;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.1em;
+      background: var(--accent);
+      margin-left: 2px;
+      vertical-align: text-bottom;
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+    .hero-summary {
+      max-width: 580px;
+      color: #999;
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+    .badge {
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 5px 12px;
+      border-radius: 4px;
+      border: 1px solid var(--border2);
+      color: var(--muted);
+      background: var(--surface);
+    }
+    .badge.highlight {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(230,57,70,0.06);
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 11px 24px;
+      border-radius: 6px;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-primary:hover { background: var(--accent2); color: #fff; }
+    .btn-secondary {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--border2);
+    }
+    .btn-secondary:hover { border-color: var(--text); color: var(--text); }
+
+    /* ── ABOUT ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .about-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .about-card-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .about-card p {
+      font-size: 13px;
+      color: #aaa;
+      line-height: 1.7;
+    }
+
+    /* ── SKILLS ── */
+    .skills-group { margin-bottom: 28px; }
+    .skills-group-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .skill-tag {
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: 1px solid var(--border2);
+      color: var(--text);
+      background: var(--surface);
+      transition: all 0.15s;
+    }
+    .skill-tag:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(230,57,70,0.06);
+    }
+
+    /* ── EXPERIENCE ── */
+    .exp-item {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 40px;
+    }
+    .exp-item::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 6px;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+    }
+    .exp-item::after {
+      content: "";
+      position: absolute;
+      left: 3px; top: 18px; bottom: -32px;
+      width: 1px;
+      background: var(--border2);
+    }
+    .exp-item:last-child::after { display: none; }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+    .exp-title {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--text);
+    }
+    .exp-date {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+    }
+    .exp-company {
+      font-size: 13px;
+      color: var(--accent);
+      margin-bottom: 10px;
+      font-family: var(--mono);
+    }
+    .exp-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .exp-bullets li {
+      font-size: 13px;
+      color: #999;
+      padding-left: 16px;
+      position: relative;
+    }
+    .exp-bullets li::before {
+      content: "›";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* ── PROJECTS ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .project-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .project-card.featured {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: start;
+    }
+    .project-emoji {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+    .project-title {
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .project-desc {
+      font-size: 13px;
+      color: #999;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .project-tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--surface2);
+      border: 1px solid var(--border2);
+      color: var(--muted);
+    }
+    .project-links {
+      display: flex;
+      gap: 12px;
+    }
+    .project-link {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      border: 1px solid var(--border2);
+      padding: 5px 12px;
+      border-radius: 5px;
+      transition: all 0.15s;
+    }
+    .project-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ── CERTS ── */
+    .certs-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .cert-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .cert-name {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text);
+    }
+    .cert-issuer {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .cert-date {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    /* ── MILITARY ── */
+    .military-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 24px 28px;
+    }
+    .military-title {
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .military-sub {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+    .military-card p {
+      font-size: 13px;
+      color: #999;
+      line-height: 1.75;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+      text-align: center;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--dim);
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      nav { padding: 0 20px; }
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 11px; }
+      section { padding: 80px 20px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .project-card.featured { grid-template-columns: 1fr; }
+      .hero-name { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">garry@zmora:~$</div>
+    <div class="nav-links">
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#experience">experience</a>
+      <a href="#projects">projects</a>
+      <a href="#contact">contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-prompt">portfolio.sh — v1.0</div>
+    <div class="hero-name">Gershon<br /><span>(Garry)</span> Zmora</div>
+    <div class="hero-title" id="typewriter"><span class="cursor"></span></div>
+    <p class="hero-summary">
+      Google-certified Cloud Engineer with 3 years of experience in GCP infrastructure,
+      incident resolution, and enterprise technical support. Transitioning into
+      sysadmin, IT infrastructure, and cloud operations. Ex-Israel Air Force.
+    </p>
+    <div class="hero-badges">
+      <span class="badge highlight">☁️ Google ACE Certified</span>
+      <span class="badge">🌐 GCP · Linux · Windows</span>
+      <span class="badge">🐋 Docker · Kubernetes</span>
+      <span class="badge">📍 Rishon LeZion, Israel</span>
+      <span class="badge">🌍 EN · HE · RU</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="mailto:garryzmora@gmail.com">Get in touch</a>
+      <a class="btn btn-secondary" href="https://github.com/shawramaland" target="_blank">GitHub</a>
+      <a class="btn btn-secondary" href="https://www.linkedin.com/in/gershon-zmora" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">// about</div>
+    <h2>Who I Am</h2>
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-card-label">Background</div>
+        <p>
+          Started in the Israel Air Force as a Helicopter Mechanic and Rescue Team Leader —
+          working under pressure, diagnosing problems fast, and keeping critical systems running.
+          That mindset carried directly into IT.
+        </p>
+      </div>
+      <div class="about-card">
+        <div class="about-card-label">Experience</div>
+        <p>
+          3 years supporting enterprise GCP customers at Concentrix and Cognizant —
+          troubleshooting Compute Engine, VPC, IAM, GKE, and Kubernetes in production.
+          Real issues, real scale, real urgency.
+        </p>
+      </div>
+      <div class="about-card">
+        <div class="about-card-label">Now</div>
+        <p>
+          Expanding into system administration and cybersecurity through hands-on labs
+          (TryHackMe), self-built projects, and daily practice. Building things to learn things.
+        </p>
+      </div>
+      <div class="about-card">
+        <div class="about-card-label">Looking For</div>
+        <p>
+          A sysadmin, IT infrastructure, help desk, or cloud operations role where I can
+          apply what I know and keep growing. Open to on-site, hybrid, or remote.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label">// skills</div>
+    <h2>What I Work With</h2>
+
+    <div class="skills-group">
+      <div class="skills-group-label">Cloud & Infrastructure</div>
+      <div class="skills-list">
+        <span class="skill-tag">GCP</span>
+        <span class="skill-tag">Compute Engine</span>
+        <span class="skill-tag">VPC</span>
+        <span class="skill-tag">IAM</span>
+        <span class="skill-tag">GKE</span>
+        <span class="skill-tag">Cloud Logging</span>
+        <span class="skill-tag">gcloud CLI</span>
+        <span class="skill-tag">Google Workspace Admin</span>
+      </div>
+    </div>
+
+    <div class="skills-group">
+      <div class="skills-group-label">Containers & DevOps</div>
+      <div class="skills-list">
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">Kubernetes</span>
+        <span class="skill-tag">CI/CD</span>
+        <span class="skill-tag">GitHub Actions</span>
+        <span class="skill-tag">Git</span>
+        <span class="skill-tag">Docker Hub</span>
+      </div>
+    </div>
+
+    <div class="skills-group">
+      <div class="skills-group-label">Operating Systems & Networking</div>
+      <div class="skills-list">
+        <span class="skill-tag">Linux (Ubuntu, CentOS)</span>
+        <span class="skill-tag">Windows 10/11</span>
+        <span class="skill-tag">TCP/IP</span>
+        <span class="skill-tag">DNS</span>
+        <span class="skill-tag">VPN</span>
+        <span class="skill-tag">Firewall Rules</span>
+        <span class="skill-tag">SSH</span>
+        <span class="skill-tag">Active Directory</span>
+      </div>
+    </div>
+
+    <div class="skills-group">
+      <div class="skills-group-label">Scripting & Languages</div>
+      <div class="skills-list">
+        <span class="skill-tag">Bash</span>
+        <span class="skill-tag">PowerShell</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">React</span>
+      </div>
+    </div>
+
+    <div class="skills-group">
+      <div class="skills-group-label">Currently Learning</div>
+      <div class="skills-list">
+        <span class="skill-tag">Cybersecurity (TryHackMe)</span>
+        <span class="skill-tag">Windows Server</span>
+        <span class="skill-tag">Security+</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-label">// experience</div>
+    <h2>Work History</h2>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-title">Technical Support Representative — Cloud & Infrastructure</div>
+        <div class="exp-date">2024 – 2026</div>
+      </div>
+      <div class="exp-company">Cognizant & Concentrix · Tel Aviv</div>
+      <ul class="exp-bullets">
+        <li>Operated and troubleshot GCP infrastructure (Compute Engine, VPC, IAM, GKE) in production environments for enterprise customers.</li>
+        <li>Diagnosed CPU, networking, Kubernetes, and IP issues under time pressure at scale.</li>
+        <li>Configured firewall rules, VPNs, and IAM policies for enterprise customers.</li>
+        <li>Used Cloud Console, Cloud Logging, and gcloud CLI for incident diagnosis and resolution.</li>
+        <li>Transitioned with the Google contract from Concentrix to Cognizant — same role, continued without interruption.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-title">Technical Support Representative — Google Workspace</div>
+        <div class="exp-date">2023 – 2024</div>
+      </div>
+      <div class="exp-company">Concentrix · Tel Aviv</div>
+      <ul class="exp-bullets">
+        <li>Provided bilingual (English/Hebrew) support for Google Workspace enterprise customers via phone and email.</li>
+        <li>Troubleshot DNS, email delivery, cloud storage, and data migration issues.</li>
+        <li>Collaborated with Google Cloud and Product Engineering teams on escalations.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-title">Logistics Assistant</div>
+        <div class="exp-date">2022</div>
+      </div>
+      <div class="exp-company">Shmirah VeBitahon · Tel Aviv</div>
+      <ul class="exp-bullets">
+        <li>Coordinated logistics and equipment handling under strict safety protocols.</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label">// projects</div>
+    <h2>What I've Built</h2>
+
+    <div class="projects-grid">
+      <div class="project-card featured">
+        <div>
+          <div class="project-emoji">📋</div>
+          <div class="project-title">Job Tracker</div>
+          <p class="project-desc">
+            Built while job hunting — so it solves a real problem. Tracks job applications
+            with status, notes, and stats. Includes an interview prep system with 100+
+            sysadmin/devops questions, a documentation browser, and arcade games for the
+            waiting. Fully Dockerized and pushed to Docker Hub.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">React</span>
+            <span class="project-tag">Docker</span>
+            <span class="project-tag">Docker Hub</span>
+            <span class="project-tag">GitHub Actions</span>
+            <span class="project-tag">Nginx</span>
+            <span class="project-tag">CI/CD</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/shawramaland/jobtracking" target="_blank">⌥ GitHub</a>
+            <a class="project-link" href="https://hub.docker.com/r/bazingalol/job-tracker" target="_blank">🐋 Docker Hub</a>
+          </div>
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#333;line-height:2;white-space:pre;align-self:center;">
+docker pull bazingalol/<br/>  job-tracker:latest<br/><br/>docker run -p 8080:80 \<br/>  bazingalol/job-tracker
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-emoji">🎯</div>
+        <div class="project-title">Frontline — Contribution Graph</div>
+        <p class="project-desc">
+          Custom GitHub contribution graph rendered as a battleship grid with animated
+          tracers and hit markers. Generated via Python script and deployed via GitHub Actions.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">SVG</span>
+          <span class="project-tag">GitHub Actions</span>
+          <span class="project-tag">CSS Animations</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/shawramaland" target="_blank">⌥ GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-emoji">🔒</div>
+        <div class="project-title">Self-Study Lab</div>
+        <p class="project-desc">
+          Ongoing TryHackMe labs covering networking, Linux administration, Active Directory,
+          and cybersecurity fundamentals. Hands-on, not just reading.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">TryHackMe</span>
+          <span class="project-tag">Linux</span>
+          <span class="project-tag">Networking</span>
+          <span class="project-tag">Active Directory</span>
+          <span class="project-tag">Cybersecurity</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://tryhackme.com" target="_blank">↗ TryHackMe</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- CERTS -->
+  <section id="certifications">
+    <div class="section-label">// certifications</div>
+    <h2>Certifications</h2>
+    <div class="certs-list">
+      <div class="cert-item">
+        <div>
+          <div class="cert-name">Google Associate Cloud Engineer</div>
+          <div class="cert-issuer">Google Cloud</div>
+        </div>
+        <div class="cert-date">2024 – 2027</div>
+      </div>
+      <div class="cert-item">
+        <div>
+          <div class="cert-name">Cybersecurity, Networking & Sysadmin Labs</div>
+          <div class="cert-issuer">TryHackMe</div>
+        </div>
+        <div class="cert-date">Ongoing</div>
+      </div>
+      <div class="cert-item">
+        <div>
+          <div class="cert-name">Python Basics</div>
+          <div class="cert-issuer">Codecademy</div>
+        </div>
+        <div class="cert-date">2023 – Present</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- MILITARY -->
+  <section id="military">
+    <div class="section-label">// background</div>
+    <h2>Military Service</h2>
+    <div class="military-card">
+      <div class="military-title">Helicopter Mechanic & Rescue Team Leader</div>
+      <div class="military-sub">Israel Air Force · Discharged as First Sergeant</div>
+      <p>
+        Performed hands-on mechanical maintenance, diagnostics, and repair on helicopter systems.
+        Led rescue team operations under high-pressure, time-critical conditions.
+        <br /><br />
+        The Air Force taught me how to stay calm when things break, work methodically under pressure,
+        and take ownership of outcomes. Those aren't soft skills — they're the difference between
+        a good incident response and a bad one.
+      </p>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- FOOTER / CONTACT -->
+  <footer id="contact">
+    <div class="footer-links">
+      <a href="mailto:garryzmora@gmail.com">garryzmora@gmail.com</a>
+      <a href="https://github.com/shawramaland" target="_blank">github.com/shawramaland</a>
+      <a href="https://www.linkedin.com/in/gershon-zmora" target="_blank">LinkedIn</a>
+      <a href="tel:+972526267044">+972 52-626-7044</a>
+    </div>
+    <div class="footer-copy">
+      Garry Zmora · Rishon LeZion, Israel · Open to sysadmin, IT infrastructure & cloud operations roles
+    </div>
+  </footer>
+
+  <script>
+    // Typewriter effect
+    const phrases = [
+      "Cloud Engineer → Sysadmin",
+      "GCP · Linux · Docker · Kubernetes",
+      "Google ACE Certified",
+      "Open to IT & Infrastructure roles",
+    ];
+    let pi = 0, ci = 0, deleting = false;
+    const el = document.getElementById("typewriter");
+
+    function type() {
+      const phrase = phrases[pi];
+      if (!deleting) {
+        ci++;
+        el.innerHTML = phrase.slice(0, ci) + '<span class="cursor"></span>';
+        if (ci === phrase.length) {
+          deleting = true;
+          setTimeout(type, 2000);
+          return;
+        }
+      } else {
+        ci--;
+        el.innerHTML = phrase.slice(0, ci) + '<span class="cursor"></span>';
+        if (ci === 0) {
+          deleting = false;
+          pi = (pi + 1) % phrases.length;
+        }
+      }
+      setTimeout(type, deleting ? 40 : 70);
+    }
+    setTimeout(type, 800);
+
+    // Smooth active nav highlight
+    const sections = document.querySelectorAll("section[id], footer[id]");
+    const navLinks = document.querySelectorAll(".nav-links a");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(a => {
+            a.style.color = a.getAttribute("href") === "#" + e.target.id ? "var(--text)" : "";
+          });
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(s => observer.observe(s));
+  </script>
+</body>
+</html>
