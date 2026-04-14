@@ -370,33 +370,99 @@
     .btn-primary { background: var(--face); color: var(--text); }
     .btn-secondary { background: var(--face); color: var(--text); }
 
-    /* ── ABOUT ── */
+    /* ── ABOUT FLIP CARDS ── */
     .about-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 8px;
     }
-    .about-card {
+    .flip-card {
+      height: 180px;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.5s ease;
+    }
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    /* FRONT — looks like a W95 folder/icon */
+    .flip-card-front {
+      background: var(--face);
+      border-top: 2px solid var(--bl);
+      border-left: 2px solid var(--bl);
+      border-bottom: 2px solid var(--bdd);
+      border-right: 2px solid var(--bdd);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .flip-card-icon {
+      font-size: 36px;
+      line-height: 1;
+    }
+    .flip-card-label {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text);
+      text-align: center;
+      background: var(--accent);
+      color: #fff;
+      padding: 2px 10px;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+    }
+    .flip-hint {
+      font-family: var(--mono);
+      font-size: 9px;
+      color: var(--dim);
+      position: absolute;
+      top: 6px;
+      right: 8px;
+    }
+    /* BACK — sunken W95 client area */
+    .flip-card-back {
       background: var(--client);
       border-top: 2px solid var(--bdd);
       border-left: 2px solid var(--bdd);
       border-bottom: 2px solid var(--bl);
       border-right: 2px solid var(--bl);
-      padding: 12px;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
     }
-    .about-card-label {
+    .flip-card-back-title {
+      background: linear-gradient(to right, var(--title1), var(--title2));
+      color: #fff;
       font-family: var(--sans);
       font-size: 11px;
       font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+      padding: 3px 8px;
     }
-    .about-card p {
+    .flip-card-back p {
       font-size: 12px;
       color: var(--muted);
       line-height: 1.6;
+      padding: 10px 12px;
+      flex: 1;
+      overflow: hidden;
     }
 
     /* ── SKILLS ── */
@@ -759,14 +825,11 @@
         <div><span class="t-prompt">garry@zmora</span><span class="t-dim">:</span><span class="t-out2">~</span><span class="t-dim">$</span> <span class="t-cmd">whoami</span></div>
         <div><span class="t-out">Gershon (Garry) Zmora</span></div>
         <div>&nbsp;</div>
-        <div><span class="t-prompt">garry@zmora</span><span class="t-dim">:</span><span class="t-out2">~</span><span class="t-dim">$</span> <span class="t-cmd">cat skills.txt</span></div>
-        <div><span class="t-out">GCP · Docker · Kubernetes</span></div>
-        <div><span class="t-out">Linux · Bash · Python</span></div>
-        <div><span class="t-out">Git · Bash · Networking</span></div>
-        <div>&nbsp;</div>
-        <div><span class="t-prompt">garry@zmora</span><span class="t-dim">:</span><span class="t-out2">~</span><span class="t-dim">$</span> <span class="t-cmd">docker pull bazingalol/job-tracker</span></div>
-        <div><span class="t-out2">latest: Pulling from bazingalol/job-tracker</span></div>
-        <div><span class="t-out">✔ Pull complete</span></div>
+        <div><span class="t-prompt">garry@zmora</span><span class="t-dim">:</span><span class="t-out2">~</span><span class="t-dim">$</span> <span class="t-cmd">cat about.txt</span></div>
+        <div><span class="t-out">Location : Rishon LeZion, Israel</span></div>
+        <div><span class="t-out">Role     : IT & Cloud Support</span></div>
+        <div><span class="t-out">Cert     : Google ACE</span></div>
+        <div><span class="t-out">Languages: EN · HE · RU</span></div>
         <div>&nbsp;</div>
         <div><span class="t-prompt">garry@zmora</span><span class="t-dim">:</span><span class="t-out2">~</span><span class="t-dim">$</span> <span class="t-cmd">echo $STATUS</span></div>
         <div><span class="t-out">open_to_work=true</span></div>
@@ -774,162 +837,6 @@
       </div>
     </div>
     </div><!-- end hero-inner -->
-  </section>
-
-  <hr class="divider" />
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="section-label">// about</div>
-    <h2>Who I Am</h2>
-    <div class="win-body"><div class="about-grid">
-      <div class="about-card">
-        <div class="about-card-label">Background</div>
-        <p>
-          Started in the Israel Air Force as a Helicopter Mechanic and Rescue Team Leader.
-          I'm the kind of person who does what needs to be done and doesn't make a fuss about it.
-          That attitude came from the military and it's carried into every job since.
-        </p>
-      </div>
-      <div class="about-card">
-        <div class="about-card-label">Experience</div>
-        <p>
-          3 years supporting enterprise GCP customers at Concentrix and Cognizant —
-          troubleshooting Compute Engine, VPC, IAM, GKE, and Kubernetes in production.
-          Real issues, real scale, real urgency.
-        </p>
-      </div>
-      <div class="about-card">
-        <div class="about-card-label">Now</div>
-        <p>
-          Doing TryHackMe labs, working through Linux on LabEx, and building projects
-          I actually use. Not just reading about it — getting hands dirty. IT is something
-          I genuinely enjoy, and that shows in the work.
-        </p>
-      </div>
-      <div class="about-card">
-        <div class="about-card-label">Looking For</div>
-        <p>
-          A sysadmin, cloud ops, or IT support role where there's real work to do.
-          I'm not looking to just watch tickets come in — I want to get into the systems,
-          solve the problems, and keep learning while I'm at it.
-        </p>
-      </div>
-    </div></div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="section-label">// skills</div>
-    <h2>What I Work With</h2>
-    <div class="win-body"><div class="skills-grid">
-      <div class="skills-group">
-        <div class="skills-group-label">Cloud & Infrastructure</div>
-        <div class="skills-list">
-          <span class="skill-tag"><i class="devicon-googlecloud-plain"></i>GCP</span>
-          <span class="skill-tag"><i class="devicon-googlecloud-plain"></i>Compute Engine</span>
-          <span class="skill-tag"><i class="devicon-googlecloud-plain"></i>VPC</span>
-          <span class="skill-tag"><i class="devicon-googlecloud-plain"></i>IAM</span>
-          <span class="skill-tag"><i class="devicon-googlecloud-plain"></i>GKE</span>
-          <span class="skill-tag"><i class="devicon-googlecloud-plain"></i>Cloud Logging</span>
-          <span class="skill-tag"><i class="devicon-googlecloud-plain"></i>gcloud CLI</span>
-          <span class="skill-tag"><i class="devicon-google-plain"></i>Google Workspace Admin</span>
-        </div>
-      </div>
-
-      <div class="skills-group">
-        <div class="skills-group-label">Containers & Version Control</div>
-        <div class="skills-list">
-          <span class="skill-tag"><i class="devicon-docker-plain"></i>Docker</span>
-          <span class="skill-tag"><i class="devicon-kubernetes-plain"></i>Kubernetes</span>
-          <span class="skill-tag"><i class="devicon-git-plain"></i>Git</span>
-          <span class="skill-tag"><i class="devicon-docker-plain"></i>Docker Hub</span>
-        </div>
-      </div>
-
-      <div class="skills-group">
-        <div class="skills-group-label">Operating Systems & Networking</div>
-        <div class="skills-list">
-          <span class="skill-tag"><i class="devicon-linux-plain"></i>Linux (Ubuntu, CentOS)</span>
-          <span class="skill-tag"><i class="devicon-windows11-original"></i>Windows 10/11</span>
-          <span class="skill-tag">TCP/IP</span>
-          <span class="skill-tag">DNS</span>
-          <span class="skill-tag">VPN</span>
-          <span class="skill-tag">Firewall Rules</span>
-          <span class="skill-tag">RDP</span>
-          <span class="skill-tag"><i class="devicon-windows11-original"></i>Active Directory</span>
-          <span class="skill-tag"><i class="devicon-virtualbox-plain"></i>VirtualBox</span>
-        </div>
-      </div>
-
-      <div class="skills-group">
-        <div class="skills-group-label">Scripting & Languages</div>
-        <div class="skills-list">
-          <span class="skill-tag"><i class="devicon-bash-plain"></i>Bash</span>
-          <span class="skill-tag"><i class="devicon-powershell-plain"></i>PowerShell</span>
-          <span class="skill-tag"><i class="devicon-python-plain"></i>Python</span>
-          <span class="skill-tag"><i class="devicon-javascript-plain"></i>JavaScript</span>
-          <span class="skill-tag"><i class="devicon-react-original"></i>React</span>
-        </div>
-      </div>
-
-      <div class="skills-group">
-        <div class="skills-group-label">Currently Learning</div>
-        <div class="skills-list">
-          <span class="skill-tag">🔒 Cybersecurity (TryHackMe)</span>
-          <span class="skill-tag"><i class="devicon-linux-plain"></i>Linux Journey (LabEx)</span>
-          <span class="skill-tag"><i class="devicon-windows11-original"></i>Windows Server</span>
-        </div>
-      </div>
-    </div></div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="section-label">// experience</div>
-    <h2>Work History</h2>
-    <div class="win-body"><div class="exp-item">
-      <div class="exp-header">
-        <div class="exp-title">Technical Support Representative — Cloud & Infrastructure</div>
-        <div class="exp-date">2024 – 2026</div>
-      </div>
-      <div class="exp-company">Cognizant & Concentrix · Tel Aviv</div>
-      <ul class="exp-bullets">
-        <li>Operated and troubleshot GCP infrastructure (Compute Engine, VPC, IAM, GKE) in production environments for enterprise customers.</li>
-        <li>Diagnosed CPU, networking, Kubernetes, and IP issues under time pressure at scale.</li>
-        <li>Configured firewall rules, VPNs, and IAM policies for enterprise customers.</li>
-        <li>Used Cloud Console, Cloud Logging, and gcloud CLI for incident diagnosis and resolution.</li>
-        <li>Transitioned with the Google contract from Concentrix to Cognizant — same role, continued without interruption.</li>
-      </ul>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-header">
-        <div class="exp-title">Technical Support Representative — Google Workspace</div>
-        <div class="exp-date">2023 – 2024</div>
-      </div>
-      <div class="exp-company">Concentrix · Tel Aviv</div>
-      <ul class="exp-bullets">
-        <li>Provided bilingual (English/Hebrew) support for Google Workspace enterprise customers via phone and email.</li>
-        <li>Troubleshot DNS, email delivery, cloud storage, and data migration issues.</li>
-        <li>Collaborated with Google Cloud and Product Engineering teams on escalations.</li>
-      </ul>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-header">
-        <div class="exp-title">Logistics Assistant</div>
-        <div class="exp-date">2022</div>
-      </div>
-      <div class="exp-company">Shmirah VeBitahon · Tel Aviv</div>
-      <ul class="exp-bullets">
-        <li>Coordinated logistics and equipment handling under strict safety protocols.</li>
-      </ul>
-    </div></div>
   </section>
 
   <hr class="divider" />
@@ -1001,6 +908,189 @@ docker pull bazingalol/<br/>  job-tracker:latest<br/><br/>docker run -p 8080:80 
           <a class="project-link" href="https://github.com/shawramaland" target="_blank">⌥ GitHub</a>
         </div>
       </div>
+    </div></div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-label">// experience</div>
+    <h2>Work History</h2>
+    <div class="win-body"><div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-title">Technical Support Representative — Cloud & Infrastructure</div>
+        <div class="exp-date">2024 – 2026</div>
+      </div>
+      <div class="exp-company">Cognizant & Concentrix · Tel Aviv</div>
+      <ul class="exp-bullets">
+        <li>Operated and troubleshot GCP infrastructure (Compute Engine, VPC, IAM, GKE) in production environments for enterprise customers.</li>
+        <li>Diagnosed CPU, networking, Kubernetes, and IP issues under time pressure at scale.</li>
+        <li>Configured firewall rules, VPNs, and IAM policies for enterprise customers.</li>
+        <li>Used Cloud Console, Cloud Logging, and gcloud CLI for incident diagnosis and resolution.</li>
+        <li>Transitioned with the Google contract from Concentrix to Cognizant — same role, continued without interruption.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-title">Technical Support Representative — Google Workspace</div>
+        <div class="exp-date">2023 – 2024</div>
+      </div>
+      <div class="exp-company">Concentrix · Tel Aviv</div>
+      <ul class="exp-bullets">
+        <li>Provided bilingual (English/Hebrew) support for Google Workspace enterprise customers via phone and email.</li>
+        <li>Troubleshot DNS, email delivery, cloud storage, and data migration issues.</li>
+        <li>Collaborated with Google Cloud and Product Engineering teams on escalations.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-title">Logistics Assistant</div>
+        <div class="exp-date">2022</div>
+      </div>
+      <div class="exp-company">Shmirah VeBitahon · Tel Aviv</div>
+      <ul class="exp-bullets">
+        <li>Coordinated logistics and equipment handling under strict safety protocols.</li>
+      </ul>
+    </div></div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label">// skills</div>
+    <h2>What I Work With</h2>
+    <div class="win-body"><div class="skills-grid">
+      <div class="skills-group">
+        <div class="skills-group-label">Cloud & Infrastructure</div>
+        <div class="skills-list">
+          <span class="skill-tag"><i class="devicon-googlecloud-plain"></i>GCP</span>
+          <span class="skill-tag"><i class="devicon-googlecloud-plain"></i>Compute Engine</span>
+          <span class="skill-tag"><i class="devicon-googlecloud-plain"></i>VPC</span>
+          <span class="skill-tag"><i class="devicon-googlecloud-plain"></i>IAM</span>
+          <span class="skill-tag"><i class="devicon-googlecloud-plain"></i>GKE</span>
+          <span class="skill-tag"><i class="devicon-googlecloud-plain"></i>Cloud Logging</span>
+          <span class="skill-tag"><i class="devicon-googlecloud-plain"></i>gcloud CLI</span>
+          <span class="skill-tag"><i class="devicon-google-plain"></i>Google Workspace Admin</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <div class="skills-group-label">Containers & Version Control</div>
+        <div class="skills-list">
+          <span class="skill-tag"><i class="devicon-docker-plain"></i>Docker</span>
+          <span class="skill-tag"><i class="devicon-kubernetes-plain"></i>Kubernetes</span>
+          <span class="skill-tag"><i class="devicon-git-plain"></i>Git</span>
+          <span class="skill-tag"><i class="devicon-docker-plain"></i>Docker Hub</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <div class="skills-group-label">Operating Systems & Networking</div>
+        <div class="skills-list">
+          <span class="skill-tag"><i class="devicon-linux-plain"></i>Linux (Ubuntu, CentOS)</span>
+          <span class="skill-tag"><i class="devicon-windows11-original"></i>Windows 10/11</span>
+          <span class="skill-tag"><i class="devicon-windows11-original"></i>Windows Server</span>
+          <span class="skill-tag">TCP/IP</span>
+          <span class="skill-tag">DNS</span>
+          <span class="skill-tag">VPN</span>
+          <span class="skill-tag">Firewall Rules</span>
+          <span class="skill-tag">RDP</span>
+          <span class="skill-tag"><i class="devicon-windows11-original"></i>Active Directory</span>
+          <span class="skill-tag"><i class="devicon-virtualbox-plain"></i>VirtualBox</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <div class="skills-group-label">Scripting & Languages</div>
+        <div class="skills-list">
+          <span class="skill-tag"><i class="devicon-bash-plain"></i>Bash</span>
+          <span class="skill-tag"><i class="devicon-powershell-plain"></i>PowerShell</span>
+          <span class="skill-tag"><i class="devicon-python-plain"></i>Python</span>
+          <span class="skill-tag"><i class="devicon-javascript-plain"></i>JavaScript</span>
+          <span class="skill-tag"><i class="devicon-react-original"></i>React</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <div class="skills-group-label">Currently Learning</div>
+        <div class="skills-list">
+          <span class="skill-tag">🔒 Cybersecurity (TryHackMe)</span>
+          <span class="skill-tag"><i class="devicon-linux-plain"></i>Linux Journey (LabEx)</span>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">// about</div>
+    <h2>Who I Am</h2>
+    <div class="win-body"><div class="about-grid">
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <span class="flip-hint">click</span>
+            <div class="flip-card-icon">🎖</div>
+            <div class="flip-card-label">Background</div>
+          </div>
+          <div class="flip-card-back">
+            <div class="flip-card-back-title">Background</div>
+            <p>Started in the Israel Air Force as a Helicopter Mechanic and Rescue Team Leader.
+            I'm the kind of person who does what needs to be done and doesn't make a fuss about it.
+            That attitude carried into every job since.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <span class="flip-hint">click</span>
+            <div class="flip-card-icon">☁️</div>
+            <div class="flip-card-label">Experience</div>
+          </div>
+          <div class="flip-card-back">
+            <div class="flip-card-back-title">Experience</div>
+            <p>3 years supporting enterprise GCP customers at Concentrix and Cognizant —
+            troubleshooting Compute Engine, VPC, IAM, GKE, and Kubernetes in production.
+            Real issues, real scale, real urgency.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <span class="flip-hint">click</span>
+            <div class="flip-card-icon">💻</div>
+            <div class="flip-card-label">Now</div>
+          </div>
+          <div class="flip-card-back">
+            <div class="flip-card-back-title">Now</div>
+            <p>Doing TryHackMe labs, working through Linux on LabEx, and building projects
+            I actually use. Not just reading about it — getting hands dirty. IT is something
+            I genuinely enjoy, and that shows in the work.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <span class="flip-hint">click</span>
+            <div class="flip-card-icon">🔍</div>
+            <div class="flip-card-label">Looking For</div>
+          </div>
+          <div class="flip-card-back">
+            <div class="flip-card-back-title">Looking For</div>
+            <p>A sysadmin, cloud ops, or IT support role where there's real work to do.
+            I'm not looking to just watch tickets come in — I want to get into the systems,
+            solve the problems, and keep learning while I'm at it.</p>
+          </div>
+        </div>
+      </div>
+
     </div></div>
   </section>
 
