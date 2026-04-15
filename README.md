@@ -1,7 +1,6 @@
 # Hello There, my name is Gershon (or Garry in short)👋
 
-Google-certified Cloud Engineer based in Israel, with 3 years of experience supporting enterprise GCP customers at Concentrix and Cognizant — Compute Engine, VPC, IAM, GKE, Kubernetes, the real stuff.
-I'm the kind of person who does what needs to be done and doesn't make a fuss about it. Currently looking for sysadmin, cloud ops, or IT infrastructure roles.
+Google-certified Cloud Engineer with 3 years of experience in technical support, cloud infrastructure troubleshooting (GCP), and incident resolution across Linux and Windows environments. Looking to transition into a sysadmin, IT infrastructure, or cloud operations role.
 
 ---
 
@@ -53,13 +52,6 @@ I'm the kind of person who does what needs to be done and doesn't make a fuss ab
 
 - 📋 **[Job Tracker](https://github.com/shawramaland/jobtracking)** — built while job hunting. Tracks applications, statuses, follow-ups, and interview notes. Has arcade games for the waiting. Dockerized and on Docker Hub.
 - 📓 **[Journal App](https://github.com/shawramaland/JournalApp)** — desktop journal built with Java and JavaFX. Password-protected, rich text editor, SQLite storage. Started in 2023, revisited in 2026.
-
----
-
-## Background
-
-Ex-Israel Air Force — Helicopter Mechanic and Rescue Team Leader.  
-Learned to stay calm when things break under pressure. Still applies.
 
 ---
 
