@@ -1,7 +1,7 @@
 # Hello There, my name is Gershon (or Garry in short)👋
 
-Google-certified Cloud Engineer based in Israel, with about 3 years of experience working with GCP (Compute Engine, VPC, IAM, Kubernetes) and supporting enterprise customers at scale.
-Currently transitioning into sysadmin, IT infrastructure, and cloud operations, while also exploring cybersecurity on the side.
+Google-certified Cloud Engineer based in Israel, with 3 years of experience supporting enterprise GCP customers at Concentrix and Cognizant — Compute Engine, VPC, IAM, GKE, Kubernetes, the real stuff.
+I'm the kind of person who does what needs to be done and doesn't make a fuss about it. Currently looking for sysadmin, cloud ops, or IT infrastructure roles.
 
 ---
 
@@ -10,9 +10,9 @@ Currently transitioning into sysadmin, IT infrastructure, and cloud operations, 
 | Area | Tools |
 |------|-------|
 | ☁️ Cloud | GCP, gcloud CLI, Cloud Logging, Google Workspace Admin |
-| 🌐 Networking | TCP/IP, DNS, VPN, firewall rules, VPC |
-| 🖥️ OS | Linux (Ubuntu, CentOS), Windows 10/11 |
-| 🔐 Learning | Active Directory, Windows Server, cybersecurity (TryHackMe), Python |
+| 🌐 Networking | TCP/IP, DNS, VPN, Firewall Rules, VPC, RDP |
+| 🖥️ OS | Linux (Ubuntu, CentOS), Windows 10/11, Windows Server, Active Directory, VirtualBox |
+| 🔐 Learning | Cybersecurity (TryHackMe), Linux Journey (LabEx) |
 
 ---
 
@@ -24,8 +24,6 @@ Currently transitioning into sysadmin, IT infrastructure, and cloud operations, 
 <a href="https://www.docker.com"><img src="https://skillicons.dev/icons?i=docker&theme=dark" alt="Docker" /></a>
 <a href="https://kubernetes.io"><img src="https://skillicons.dev/icons?i=kubernetes&theme=dark" alt="Kubernetes" /></a>
 <a href="https://git-scm.com"><img src="https://skillicons.dev/icons?i=git&theme=dark" alt="Git" /></a>
-<a href="https://nodejs.org"><img src="https://skillicons.dev/icons?i=nodejs&theme=dark" alt="Node.js" /></a>
-<a href="https://www.npmjs.com"><img src="https://skillicons.dev/icons?i=npm&theme=dark" alt="npm" /></a>
 <a href="https://www.gnu.org/software/bash/"><img src="https://skillicons.dev/icons?i=bash&theme=dark" alt="Bash" /></a>
 <a href="https://learn.microsoft.com/en-us/powershell/"><img src="https://skillicons.dev/icons?i=powershell&theme=dark" alt="PowerShell" /></a>
 
@@ -53,7 +51,8 @@ Currently transitioning into sysadmin, IT infrastructure, and cloud operations, 
 
 ## Projects
 
-- 🎮 **[Job Tracker](https://github.com/shawramaland/jobtracking)** — built while job hunting. Tracks applications, preps for interviews, and has arcade games for the waiting. Dockerized.
+- 📋 **[Job Tracker](https://github.com/shawramaland/jobtracking)** — built while job hunting. Tracks applications, statuses, follow-ups, and interview notes. Has arcade games for the waiting. Dockerized and on Docker Hub.
+- 📓 **[Journal App](https://github.com/shawramaland/JournalApp)** — desktop journal built with Java and JavaFX. Password-protected, rich text editor, SQLite storage. Started in 2023, revisited in 2026.
 
 ---
 
