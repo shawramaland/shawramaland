@@ -1,6 +1,6 @@
 # Hello There, my name is Gershon (or Garry in short)👋
 
-Google-certified Cloud Engineer with 3 years of experience in technical support, cloud infrastructure troubleshooting (GCP), and incident resolution across Linux and Windows environments. Looking to transition into a sysadmin, IT infrastructure, or cloud operations role.
+IT Support Specialist with 3 years of experience troubleshooting infrastructure, networking, and system issues in enterprise environments. Experienced in supporting GCP production systems including Compute Engine, VPC, IAM, and Kubernetes, supporting enterprise customers and resolving technical issues. Google ACE Certified.
 
 ---
 
@@ -10,7 +10,7 @@ Google-certified Cloud Engineer with 3 years of experience in technical support,
 |------|-------|
 | ☁️ Cloud | GCP, gcloud CLI, Cloud Logging, Google Workspace Admin |
 | 🌐 Networking | TCP/IP, DNS, VPN, Firewall Rules, VPC, RDP |
-| 🖥️ OS | Linux (Ubuntu, CentOS), Windows 10/11, Windows Server, Active Directory, VirtualBox |
+| 🖥️ OS | Linux (Ubuntu, CentOS), Windows 10/11, Windows Server, macOS, Active Directory, VirtualBox |
 | 🔐 Learning | Cybersecurity (TryHackMe), Linux Journey (LabEx) |
 
 ---
@@ -50,6 +50,7 @@ Google-certified Cloud Engineer with 3 years of experience in technical support,
 
 ## Projects
 
+- ☢️ **[PDA-74 Zone Monitor (SysMonitor)](https://github.com/shawramaland/SysMonitor)** — terminal-based system monitoring tool that tracks CPU, memory, disk, and network activity in real time. Includes process scanning and event logging for troubleshooting and diagnostics. Built with Python and psutil.
 - 📋 **[Job Tracker](https://github.com/shawramaland/jobtracking)** — built while job hunting. Tracks applications, statuses, follow-ups, and interview notes. Has arcade games for the waiting. Dockerized and on Docker Hub.
 - 📓 **[Journal App](https://github.com/shawramaland/JournalApp)** — desktop journal built with Java and JavaFX. Password-protected, rich text editor, SQLite storage. Started in 2023, revisited in 2026.
 
@@ -63,4 +64,4 @@ Google-certified Cloud Engineer with 3 years of experience in technical support,
 
 ---
 
-*Open to sysadmin, IT infrastructure, or cloud operations roles.*
+*Open to IT Support and IT Operations roles.*
