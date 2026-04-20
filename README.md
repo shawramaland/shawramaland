@@ -26,16 +26,17 @@ IT Support Specialist with 3 years of experience troubleshooting infrastructure,
 <a href="https://www.gnu.org/software/bash/"><img src="https://skillicons.dev/icons?i=bash&theme=dark" alt="Bash" /></a>
 <a href="https://learn.microsoft.com/en-us/powershell/"><img src="https://skillicons.dev/icons?i=powershell&theme=dark" alt="PowerShell" /></a>
 
-**Languages**
+**Languages & Frameworks**
 
 <a href="https://www.python.org"><img src="https://skillicons.dev/icons?i=python&theme=dark" alt="Python" /></a>
-<a href="https://www.java.com"><img src="https://skillicons.dev/icons?i=java&theme=dark" alt="Java" /></a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://skillicons.dev/icons?i=js&theme=dark" alt="JavaScript" /></a>
+<a href="https://react.dev"><img src="https://skillicons.dev/icons?i=react&theme=dark" alt="React" /></a>
 
 **Operating Systems & Editors**
 
 <a href="https://www.linux.org"><img src="https://skillicons.dev/icons?i=linux&theme=dark" alt="Linux" /></a>
 <a href="https://www.microsoft.com/windows"><img src="https://skillicons.dev/icons?i=windows&theme=dark" alt="Windows" /></a>
+<a href="https://www.apple.com/macos"><img src="https://skillicons.dev/icons?i=apple&theme=dark" alt="macOS" /></a>
 <a href="https://code.visualstudio.com"><img src="https://skillicons.dev/icons?i=vscode&theme=dark" alt="VS Code" /></a>
 
 ---
