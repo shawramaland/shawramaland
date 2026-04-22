@@ -8,9 +8,11 @@ IT Support Specialist with 3 years of experience troubleshooting infrastructure,
 
 | Area | Tools |
 |------|-------|
-| ☁️ Cloud | GCP, gcloud CLI, Cloud Logging, Google Workspace Admin |
-| 🌐 Networking | TCP/IP, DNS, VPN, Firewall Rules, VPC, RDP |
-| 🖥️ OS | Linux (Ubuntu, CentOS), Windows 10/11, Windows Server, macOS, Active Directory, VirtualBox |
+| ☁️ Cloud & SaaS | GCP (Compute Engine, VPC, IAM, GKE), Cloud Logging, gcloud CLI, Google Workspace Admin, Microsoft 365 |
+| 🖥️ IT & Infrastructure | Active Directory, RDP, SSH, hardware troubleshooting, system provisioning |
+| 🌐 Networking | TCP/IP, DNS, VPN, firewall rules, IP troubleshooting |
+| 🛠️ Support Tools | Ticketing systems, monitoring & logging tools, remote support tools |
+| 💻 OS | Linux (Ubuntu, CentOS), Windows 10/11, Windows Server, macOS |
 | 🔐 Learning | Cybersecurity (TryHackMe), Linux Journey (LabEx) |
 
 ---
