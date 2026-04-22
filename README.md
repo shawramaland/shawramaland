@@ -46,8 +46,9 @@ IT Support Specialist with 3 years of experience troubleshooting infrastructure,
 ## Certifications
 
 - 🏅 **Google Associate Cloud Engineer** (2024–2027)
-- 🛡️ **TryHackMe** — cybersecurity & sysadmin labs (ongoing)
-- 🐍 **Python Basics** — Codecademy (ongoing)
+- 🛡️ **TryHackMe** — Cyber Security 101 Learning Path (45 hrs) · Apr 2026
+- 🛡️ **TryHackMe** — Pre Security Learning Path (19 hrs) · Mar 2026
+- 🐍 **Python Basics** — Codecademy · Oct 2024
 
 ---
 
@@ -67,4 +68,4 @@ IT Support Specialist with 3 years of experience troubleshooting infrastructure,
 
 ---
 
-*Open to IT Support and IT Operations roles.*
+*Open to IT Support / System Administrator / IT Operations roles.*
