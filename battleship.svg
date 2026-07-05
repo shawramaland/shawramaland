@@ -558,60 +558,73 @@
 <rect x="598" y="52" width="13" height="13" fill="#0a120a" rx="2"/>
 <circle cx="604" cy="58" r="4" fill="url(#gq)"/>
 <rect x="598" y="67" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="604" cy="73" r="4" fill="url(#gq)"/>
+<circle cx="604" cy="73" r="5" fill="url(#gh)" filter="url(#fh)"/>
+<circle cx="604" cy="73" r="5" class="fl" style="animation-delay:2.79s"/>
+<circle cx="604" cy="73" r="5" class="rh" style="animation-delay:2.79s"/>
+<circle cx="604" cy="73" r="5" class="rh2" style="animation-delay:3.34s"/>
 <rect x="598" y="82" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="604" cy="88" r="4" fill="url(#gq)"/>
+<circle cx="604" cy="88" r="5" fill="url(#gm)" filter="url(#fm)"/>
+<circle cx="604" cy="88" r="5" class="rm" style="animation-delay:2.92s"/>
 <rect x="598" y="97" width="13" height="13" fill="#0a120a" rx="2"/>
 <circle cx="604" cy="103" r="4" fill="url(#gq)"/>
 <rect x="598" y="112" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="604" cy="118" r="4" fill="url(#gq)"/>
+<circle cx="604" cy="118" r="5" fill="url(#gm)" filter="url(#fm)"/>
+<circle cx="604" cy="118" r="5" class="rm" style="animation-delay:3.18s"/>
 <rect x="598" y="127" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="604" cy="133" r="4" fill="url(#gq)"/>
+<circle cx="604" cy="133" r="5" fill="url(#gh)" filter="url(#fh)"/>
+<circle cx="604" cy="133" r="5" class="fl" style="animation-delay:3.31s"/>
+<circle cx="604" cy="133" r="5" class="rh" style="animation-delay:3.31s"/>
+<circle cx="604" cy="133" r="5" class="rh2" style="animation-delay:3.86s"/>
 <rect x="598" y="142" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="604" cy="148" r="4" fill="url(#gq)"/>
+<circle cx="604" cy="148" r="5" fill="url(#gm)" filter="url(#fm)"/>
+<circle cx="604" cy="148" r="5" class="rm" style="animation-delay:3.44s"/>
 <rect x="613" y="52" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="619" cy="58" r="4" fill="url(#gq)"/>
+<circle cx="619" cy="58" r="5" fill="url(#gh)" filter="url(#fh)"/>
+<circle cx="619" cy="58" r="5" class="fl" style="animation-delay:2.73s"/>
+<circle cx="619" cy="58" r="5" class="rh" style="animation-delay:2.73s"/>
+<circle cx="619" cy="58" r="5" class="rh2" style="animation-delay:3.28s"/>
 <rect x="613" y="67" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="619" cy="73" r="5" fill="url(#gh)" filter="url(#fh)"/>
-<circle cx="619" cy="73" r="5" class="fl" style="animation-delay:2.86s"/>
-<circle cx="619" cy="73" r="5" class="rh" style="animation-delay:2.86s"/>
-<circle cx="619" cy="73" r="5" class="rh2" style="animation-delay:3.41s"/>
+<circle cx="619" cy="73" r="4" fill="url(#gq)"/>
 <rect x="613" y="82" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="619" cy="88" r="5" fill="url(#gm)" filter="url(#fm)"/>
-<circle cx="619" cy="88" r="5" class="rm" style="animation-delay:2.99s"/>
+<circle cx="619" cy="88" r="5" fill="url(#gh)" filter="url(#fh)"/>
+<circle cx="619" cy="88" r="5" class="fl" style="animation-delay:2.99s"/>
+<circle cx="619" cy="88" r="5" class="rh" style="animation-delay:2.99s"/>
+<circle cx="619" cy="88" r="5" class="rh2" style="animation-delay:3.54s"/>
 <rect x="613" y="97" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="619" cy="103" r="4" fill="url(#gq)"/>
+<circle cx="619" cy="103" r="5" fill="url(#gm)" filter="url(#fm)"/>
+<circle cx="619" cy="103" r="5" class="rm" style="animation-delay:3.12s"/>
 <rect x="613" y="112" width="13" height="13" fill="#0a120a" rx="2"/>
 <circle cx="619" cy="118" r="5" fill="url(#gm)" filter="url(#fm)"/>
 <circle cx="619" cy="118" r="5" class="rm" style="animation-delay:3.25s"/>
 <rect x="613" y="127" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="619" cy="133" r="5" fill="url(#gh)" filter="url(#fh)"/>
-<circle cx="619" cy="133" r="5" class="fl" style="animation-delay:3.38s"/>
-<circle cx="619" cy="133" r="5" class="rh" style="animation-delay:3.38s"/>
-<circle cx="619" cy="133" r="5" class="rh2" style="animation-delay:3.93s"/>
+<circle cx="619" cy="133" r="4" fill="url(#gq)"/>
 <rect x="613" y="142" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="619" cy="148" r="5" fill="url(#gm)" filter="url(#fm)"/>
-<circle cx="619" cy="148" r="5" class="rm" style="animation-delay:3.51s"/>
+<circle cx="619" cy="148" r="4" fill="url(#gq)"/>
 <rect x="628" y="52" width="13" height="13" fill="#0a120a" rx="2"/>
 <circle cx="634" cy="58" r="5" fill="url(#gh)" filter="url(#fh)"/>
 <circle cx="634" cy="58" r="5" class="fl" style="animation-delay:2.80s"/>
 <circle cx="634" cy="58" r="5" class="rh" style="animation-delay:2.80s"/>
 <circle cx="634" cy="58" r="5" class="rh2" style="animation-delay:3.35s"/>
 <rect x="628" y="67" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="634" cy="73" r="4" fill="url(#gq)"/>
+<circle cx="634" cy="73" r="5" fill="url(#gh)" filter="url(#fh)"/>
+<circle cx="634" cy="73" r="5" class="fl" style="animation-delay:2.93s"/>
+<circle cx="634" cy="73" r="5" class="rh" style="animation-delay:2.93s"/>
+<circle cx="634" cy="73" r="5" class="rh2" style="animation-delay:3.48s"/>
 <rect x="628" y="82" width="13" height="13" fill="#0a120a" rx="2"/>
 <circle cx="634" cy="88" r="5" fill="url(#gh)" filter="url(#fh)"/>
 <circle cx="634" cy="88" r="5" class="fl" style="animation-delay:3.06s"/>
 <circle cx="634" cy="88" r="5" class="rh" style="animation-delay:3.06s"/>
 <circle cx="634" cy="88" r="5" class="rh2" style="animation-delay:3.61s"/>
 <rect x="628" y="97" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="634" cy="103" r="5" fill="url(#gm)" filter="url(#fm)"/>
-<circle cx="634" cy="103" r="5" class="rm" style="animation-delay:3.19s"/>
+<circle cx="634" cy="103" r="5" fill="url(#gh)" filter="url(#fh)"/>
+<circle cx="634" cy="103" r="5" class="fl" style="animation-delay:3.19s"/>
+<circle cx="634" cy="103" r="5" class="rh" style="animation-delay:3.19s"/>
+<circle cx="634" cy="103" r="5" class="rh2" style="animation-delay:3.74s"/>
 <rect x="628" y="112" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="634" cy="118" r="5" fill="url(#gm)" filter="url(#fm)"/>
-<circle cx="634" cy="118" r="5" class="rm" style="animation-delay:3.32s"/>
+<circle cx="634" cy="118" r="4" fill="url(#gq)"/>
 <rect x="628" y="127" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="634" cy="133" r="4" fill="url(#gq)"/>
+<circle cx="634" cy="133" r="5" fill="url(#gm)" filter="url(#fm)"/>
+<circle cx="634" cy="133" r="5" class="rm" style="animation-delay:3.45s"/>
 <rect x="628" y="142" width="13" height="13" fill="#0a120a" rx="2"/>
 <circle cx="634" cy="148" r="4" fill="url(#gq)"/>
 <rect x="643" y="52" width="13" height="13" fill="#0a120a" rx="2"/>
@@ -625,10 +638,7 @@
 <circle cx="649" cy="73" r="5" class="rh" style="animation-delay:3.00s"/>
 <circle cx="649" cy="73" r="5" class="rh2" style="animation-delay:3.55s"/>
 <rect x="643" y="82" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="649" cy="88" r="5" fill="url(#gh)" filter="url(#fh)"/>
-<circle cx="649" cy="88" r="5" class="fl" style="animation-delay:3.13s"/>
-<circle cx="649" cy="88" r="5" class="rh" style="animation-delay:3.13s"/>
-<circle cx="649" cy="88" r="5" class="rh2" style="animation-delay:3.68s"/>
+<circle cx="649" cy="88" r="4" fill="url(#gq)"/>
 <rect x="643" y="97" width="13" height="13" fill="#0a120a" rx="2"/>
 <circle cx="649" cy="103" r="5" fill="url(#gh)" filter="url(#fh)"/>
 <circle cx="649" cy="103" r="5" class="fl" style="animation-delay:3.26s"/>
@@ -642,27 +652,17 @@
 <rect x="643" y="142" width="13" height="13" fill="#0a120a" rx="2"/>
 <circle cx="649" cy="148" r="4" fill="url(#gq)"/>
 <rect x="658" y="52" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="664" cy="58" r="5" fill="url(#gh)" filter="url(#fh)"/>
-<circle cx="664" cy="58" r="5" class="fl" style="animation-delay:2.94s"/>
-<circle cx="664" cy="58" r="5" class="rh" style="animation-delay:2.94s"/>
-<circle cx="664" cy="58" r="5" class="rh2" style="animation-delay:3.49s"/>
+<circle cx="664" cy="58" r="4" fill="url(#gq)"/>
 <rect x="658" y="67" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="664" cy="73" r="5" fill="url(#gh)" filter="url(#fh)"/>
-<circle cx="664" cy="73" r="5" class="fl" style="animation-delay:3.07s"/>
-<circle cx="664" cy="73" r="5" class="rh" style="animation-delay:3.07s"/>
-<circle cx="664" cy="73" r="5" class="rh2" style="animation-delay:3.62s"/>
+<circle cx="664" cy="73" r="4" fill="url(#gq)"/>
 <rect x="658" y="82" width="13" height="13" fill="#0a120a" rx="2"/>
 <circle cx="664" cy="88" r="4" fill="url(#gq)"/>
 <rect x="658" y="97" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="664" cy="103" r="5" fill="url(#gh)" filter="url(#fh)"/>
-<circle cx="664" cy="103" r="5" class="fl" style="animation-delay:3.33s"/>
-<circle cx="664" cy="103" r="5" class="rh" style="animation-delay:3.33s"/>
-<circle cx="664" cy="103" r="5" class="rh2" style="animation-delay:3.88s"/>
+<circle cx="664" cy="103" r="4" fill="url(#gq)"/>
 <rect x="658" y="112" width="13" height="13" fill="#0a120a" rx="2"/>
 <circle cx="664" cy="118" r="4" fill="url(#gq)"/>
 <rect x="658" y="127" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="664" cy="133" r="5" fill="url(#gm)" filter="url(#fm)"/>
-<circle cx="664" cy="133" r="5" class="rm" style="animation-delay:3.59s"/>
+<circle cx="664" cy="133" r="4" fill="url(#gq)"/>
 <rect x="658" y="142" width="13" height="13" fill="#0a120a" rx="2"/>
 <circle cx="664" cy="148" r="4" fill="url(#gq)"/>
 <rect x="673" y="52" width="13" height="13" fill="#0a120a" rx="2"/>
@@ -712,7 +712,8 @@
 <rect x="718" y="67" width="13" height="13" fill="#0a120a" rx="2"/>
 <circle cx="724" cy="73" r="4" fill="url(#gq)"/>
 <rect x="718" y="82" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="724" cy="88" r="4" fill="url(#gq)"/>
+<circle cx="724" cy="88" r="5" fill="url(#gm)" filter="url(#fm)"/>
+<circle cx="724" cy="88" r="5" class="rm" style="animation-delay:3.48s"/>
 <rect x="718" y="97" width="13" height="13" fill="#0a120a" rx="2"/>
 <circle cx="724" cy="103" r="4" fill="url(#gq)"/>
 <rect x="718" y="112" width="13" height="13" fill="#0a120a" rx="2"/>
@@ -726,8 +727,7 @@
 <rect x="733" y="67" width="13" height="13" fill="#0a120a" rx="2"/>
 <circle cx="739" cy="73" r="4" fill="url(#gq)"/>
 <rect x="733" y="82" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="739" cy="88" r="5" fill="url(#gm)" filter="url(#fm)"/>
-<circle cx="739" cy="88" r="5" class="rm" style="animation-delay:3.55s"/>
+<circle cx="739" cy="88" r="4" fill="url(#gq)"/>
 <rect x="733" y="97" width="13" height="13" fill="#0a120a" rx="2"/>
 <circle cx="739" cy="103" r="4" fill="url(#gq)"/>
 <rect x="733" y="112" width="13" height="13" fill="#0a120a" rx="2"/>
@@ -794,18 +794,6 @@
 <circle cx="799" cy="148" r="4" fill="url(#gq)"/>
 <rect x="808" y="52" width="13" height="13" fill="#0a120a" rx="2"/>
 <circle cx="814" cy="58" r="4" fill="url(#gq)"/>
-<rect x="808" y="67" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="814" cy="73" r="4" fill="url(#gq)"/>
-<rect x="808" y="82" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="814" cy="88" r="4" fill="url(#gq)"/>
-<rect x="808" y="97" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="814" cy="103" r="4" fill="url(#gq)"/>
-<rect x="808" y="112" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="814" cy="118" r="4" fill="url(#gq)"/>
-<rect x="808" y="127" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="814" cy="133" r="4" fill="url(#gq)"/>
-<rect x="808" y="142" width="13" height="13" fill="#0a120a" rx="2"/>
-<circle cx="814" cy="148" r="4" fill="url(#gq)"/>
 <g overflow="visible"><rect x="0" y="72.2" width="35" height="1.5" fill="#ffff44" opacity="0.9" rx="1"/><circle cx="35" cy="73" r="2.0" fill="white" opacity="0.95"/><animateTransform attributeName="transform" type="translate" from="-35 0" to="873 0" dur="3s" repeatCount="indefinite" begin="0s"/></g>
 <g overflow="visible"><rect x="0" y="102.2" width="25" height="1.5" fill="#ffcc00" opacity="0.9" rx="1"/><circle cx="0" cy="103" r="2.0" fill="white" opacity="0.95"/><animateTransform attributeName="transform" type="translate" from="863 0" to="-25 0" dur="2s" repeatCount="indefinite" begin="0.8s"/></g>
 <g overflow="visible"><rect x="0" y="132.5" width="20" height="1.0" fill="#ffffff" opacity="0.9" rx="1"/><circle cx="20" cy="133" r="1.5" fill="white" opacity="0.95"/><animateTransform attributeName="transform" type="translate" from="-20 0" to="858 0" dur="2.5s" repeatCount="indefinite" begin="1.5s"/></g>
@@ -813,19 +801,19 @@
 <text x="23" y="76" text-anchor="end" fill="#2a4a2a" font-family="monospace" font-size="7">Mon</text>
 <text x="23" y="106" text-anchor="end" fill="#2a4a2a" font-family="monospace" font-size="7">Wed</text>
 <text x="23" y="136" text-anchor="end" fill="#2a4a2a" font-family="monospace" font-size="7">Fri</text>
-<text x="28" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Jun</text>
-<text x="43" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Jul</text>
-<text x="103" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Aug</text>
-<text x="178" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Sep</text>
-<text x="238" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Oct</text>
-<text x="298" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Nov</text>
-<text x="373" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Dec</text>
-<text x="433" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Jan</text>
-<text x="493" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Feb</text>
-<text x="553" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Mar</text>
-<text x="628" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Apr</text>
-<text x="688" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">May</text>
-<text x="763" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Jun</text>
+<text x="28" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Jul</text>
+<text x="88" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Aug</text>
+<text x="163" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Sep</text>
+<text x="223" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Oct</text>
+<text x="283" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Nov</text>
+<text x="358" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Dec</text>
+<text x="418" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Jan</text>
+<text x="478" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Feb</text>
+<text x="538" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Mar</text>
+<text x="613" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Apr</text>
+<text x="673" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">May</text>
+<text x="748" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Jun</text>
+<text x="808" y="42" fill="#2a4a2a" font-family="monospace" font-size="7">Jul</text>
 <circle cx="32" cy="174" r="3" fill="url(#gq)"/><text x="38" y="177" fill="#2a4a2a" font-family="monospace" font-size="7">QUIET</text>
 <circle cx="74" cy="174" r="3" fill="url(#gm)" filter="url(#fm)"/><text x="80" y="177" fill="#2a4a2a" font-family="monospace" font-size="7">ALERT</text>
 <circle cx="118" cy="174" r="3" fill="url(#gh)" filter="url(#fh)"/><text x="124" y="177" fill="#2a4a2a" font-family="monospace" font-size="7">RED ALERT</text>
